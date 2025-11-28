@@ -1,29 +1,54 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
-const port = process.env.PORT || 3000;
 
-const db = require('./data/yemekler.js');
+// --- 1. ADIM: Veri Dosyasını İçeri Alıyoruz ---
+const veri = require('./yemekler.js'); 
 
+app.use(cors()); // Flutter uygulamasının erişimi için izin
+
+const PORT = process.env.PORT || 3000;
+
+// Ana sayfa mesajı
 app.get('/', (req, res) => {
-  res.send('Listify Yemek API');
+    res.send('<h1>Listify Yemek API Çalışıyor! 🚀</h1><p>/api/yemekler adresine gidin.</p>');
 });
 
-// Return full DB (yemekler + kategoriler)
-app.get('/api', (req, res) => {
-  res.json(db);
-});
-
-// Return only yemekler list
+// --- 2. ADIM: Tüm Yemekleri Listeleme ---
+// Adres: /api/yemekler
 app.get('/api/yemekler', (req, res) => {
-  res.json(db.yemekler);
+    // URL'de kategori filtresi var mı? (Örn: ?kategori=tatli)
+    const kategori = req.query.kategori;
+
+    if (kategori) {
+        // Varsa filtrele ve gönder
+        const filtrelenmis = veri.yemekler.filter(y => y.kategori === kategori);
+        res.json(filtrelenmis);
+    } else {
+        // Yoksa hepsini gönder
+        res.json(veri.yemekler);
+    }
 });
 
-// Return single yemek by id
+// --- 3. ADIM: Tek Bir Yemeği Getirme (Detay Sayfası İçin) ---
+// Adres: /api/yemekler/1
 app.get('/api/yemekler/:id', (req, res) => {
-  const id = Number(req.params.id);
-  const item = db.yemekler.find(y => y.id === id);
-  if (!item) return res.status(404).json({ error: 'Yemek bulunamadı' });
-  res.json(item);
+    const id = parseInt(req.params.id); // URL'deki id'yi sayıya çevir
+    const yemek = veri.yemekler.find(y => y.id === id);
+
+    if (yemek) {
+        res.json(yemek);
+    } else {
+        res.status(404).json({ mesaj: "Yemek bulunamadı" });
+    }
 });
 
-app.listen(port, () => console.log(`Server listening on port ${port}`));
+// --- 4. ADIM: Kategorileri Listeleme ---
+// Adres: /api/kategoriler
+app.get('/api/kategoriler', (req, res) => {
+    res.json(veri.kategoriler);
+});
+
+app.listen(PORT, () => {
+    console.log(`Sunucu ${PORT} portunda çalışıyor.`);
+});
