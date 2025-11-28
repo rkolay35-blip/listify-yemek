@@ -3,7 +3,7 @@ const cors = require('cors');
 const app = express();
 
 // --- 1. ADIM: Veri Dosyasını İçeri Alıyoruz ---
-const veri = require('./db.js'); 
+const veri = require('./data/yemekler.json'); 
 
 app.use(cors()); // Flutter uygulamasının erişimi için izin
 
