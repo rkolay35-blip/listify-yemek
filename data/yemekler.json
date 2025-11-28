@@ -1,0 +1,61 @@
+{
+  "yemekler": [
+    {
+      "id": 1,
+      "isim": "Mercimek Çorbası",
+      "resim": "https://cdn.yemek.com/mnresize/1250/833/uploads/2014/06/mercimek-corbasi-yemekcom.jpg",
+      "kategori": "corba",
+      "sure": "30 dk",
+      "kalori": 180,
+      "malzemeler": ["Kırmızı mercimek", "Soğan", "Havuç"],
+      "tarif": "Sebzeleri kavurun, mercimeği ekleyin. Kaynayınca blendırdan geçirin."
+    },
+    {
+      "id": 2,
+      "isim": "Adana Kebap",
+      "resim": "https://cdn.yemek.com/mnresize/1250/833/uploads/2016/05/ev-usulu-adana-kebap-yemekcom.jpg",
+      "kategori": "et",
+      "sure": "45 dk",
+      "kalori": 360,
+      "malzemeler": ["Kıyma", "Kuyruk yağı", "Pul biber"],
+      "tarif": "Kıymayı yoğurun, şişlere dizin ve közde pişirin."
+    },
+    {
+      "id": 3,
+      "isim": "Fırın Sütlaç",
+      "resim": "https://cdn.yemek.com/mnresize/1250/833/uploads/2014/08/sutlac-yemekcom.jpg",
+      "kategori": "tatli",
+      "sure": "40 dk",
+      "kalori": 250,
+      "malzemeler": ["Süt", "Pirinç", "Şeker", "Nişasta"],
+      "tarif": "Sütlacı pişirin, fırın kaplarına koyup üstünü kızartın."
+    },
+    {
+      "id": 4,
+      "isim": "Zeytinyağlı Sarma",
+      "resim": "https://cdn.yemek.com/mnresize/1250/833/uploads/2014/11/zeytinyagli-yaprak-sarma-yemekcom.jpg",
+      "kategori": "zeytinyagli",
+      "sure": "60 dk",
+      "kalori": 300,
+      "malzemeler": ["Asma yaprağı", "Pirinç", "Soğan", "Zeytinyağı"],
+      "tarif": "İç harcı hazırlayıp yapraklara sarın. Limonlu suda pişirin."
+    },
+    {
+      "id": 5,
+      "isim": "Karnıyarık",
+      "resim": "https://cdn.yemek.com/mnresize/1250/833/uploads/2015/04/karniyarik-yemekcom.jpg",
+      "kategori": "ana-yemek",
+      "sure": "50 dk",
+      "kalori": 190,
+      "malzemeler": ["Patlıcan", "Kıyma", "Domates", "Biber"],
+      "tarif": "Patlıcanları kızartın, ortasını açıp kıymalı harcı ekleyin."
+    }
+  ],
+  "kategoriler": [
+    { "id": "corba", "baslik": "Çorbalar" },
+    { "id": "et", "baslik": "Et Yemekleri" },
+    { "id": "tatli", "baslik": "Tatlılar" },
+    { "id": "zeytinyagli", "baslik": "Zeytinyağlılar" },
+    { "id": "ana-yemek", "baslik": "Ana Yemekler" }
+  ]
+}
