@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
-const db = require('./data/db.json');
+const db = require('./data/yemekler.js');
 
 app.get('/', (req, res) => {
   res.send('Listify Yemek API');
