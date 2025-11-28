@@ -1,0 +1,265 @@
+{
+  "aciklama": "Resimleri Garantili Çalışan Türk Menüsü",
+  "toplam_gun": 7,
+  "menuler": [
+    {
+      "menu_id": 1,
+      "gun_basligi": "Pazartesi: Klasik Başlangıç",
+      "icerik": [
+        {
+          "tur": "🥣 Çorba",
+          "isim": "Süzme Mercimek Çorbası",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Mercimek_%C3%A7orbas%C4%B1.jpg/640px-Mercimek_%C3%A7orbas%C4%B1.jpg",
+          "sure": "30 dk"
+        },
+        {
+          "tur": "🥘 Ana Yemek",
+          "isim": "Karnıyarık",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Karniyarik.jpg/640px-Karniyarik.jpg",
+          "sure": "50 dk"
+        },
+        {
+          "tur": "🍚 Eşlikçi",
+          "isim": "Pirinç Pilavı",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Pilav.jpg/640px-Pilav.jpg",
+          "sure": "25 dk"
+        },
+        {
+          "tur": "🥗 Salata/Meze",
+          "isim": "Cacık",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Cacik.jpg/640px-Cacik.jpg",
+          "sure": "10 dk"
+        },
+        {
+          "tur": "🍰 Tatlı",
+          "isim": "Fırın Sütlaç",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/F%C4%B1r%C4%B1n_S%C3%BCtla%C3%A7.jpg/640px-F%C4%B1r%C4%B1n_S%C3%BCtla%C3%A7.jpg",
+          "sure": "45 dk"
+        }
+      ],
+      "toplam_sure": 160
+    },
+    {
+      "menu_id": 2,
+      "gun_basligi": "Salı: Esnaf Lokantası Usulü",
+      "icerik": [
+        {
+          "tur": "🥣 Çorba",
+          "isim": "Ezogelin Çorbası",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Ezogelin.jpg/640px-Ezogelin.jpg",
+          "sure": "35 dk"
+        },
+        {
+          "tur": "🥘 Ana Yemek",
+          "isim": "İzmir Köfte",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Sulu_k%C3%B6fte.jpg/640px-Sulu_k%C3%B6fte.jpg",
+          "sure": "60 dk"
+        },
+        {
+          "tur": "🍚 Eşlikçi",
+          "isim": "Bulgur Pilavı",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Bulgur_pilav.jpg/640px-Bulgur_pilav.jpg",
+          "sure": "30 dk"
+        },
+        {
+          "tur": "🥗 Salata/Meze",
+          "isim": "Mevsim Salata",
+          "resim": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80",
+          "sure": "15 dk"
+        },
+        {
+          "tur": "🍰 Tatlı",
+          "isim": "Şekerpare",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/%C5%9Eekerpare_2.jpg/640px-%C5%9Eekerpare_2.jpg",
+          "sure": "50 dk"
+        }
+      ],
+      "toplam_sure": 190
+    },
+    {
+      "menu_id": 3,
+      "gun_basligi": "Çarşamba: Milli Yemeğimiz",
+      "icerik": [
+        {
+          "tur": "🥣 Çorba",
+          "isim": "Yayla Çorbası",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Yayla_%C3%A7orbas%C4%B1_cooking.jpg/640px-Yayla_%C3%A7orbas%C4%B1_cooking.jpg",
+          "sure": "25 dk"
+        },
+        {
+          "tur": "🥘 Ana Yemek",
+          "isim": "Etli Kuru Fasulye",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Kuru_fasulye.jpg/640px-Kuru_fasulye.jpg",
+          "sure": "55 dk"
+        },
+        {
+          "tur": "🍚 Eşlikçi",
+          "isim": "Tereyağlı Pirinç Pilavı",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Pilav.jpg/640px-Pilav.jpg",
+          "sure": "25 dk"
+        },
+        {
+          "tur": "🥗 Salata/Meze",
+          "isim": "Karışık Turşu",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Tursu.jpg/640px-Tursu.jpg",
+          "sure": "0 dk"
+        },
+        {
+          "tur": "🍰 Tatlı",
+          "isim": "Kabak Tatlısı",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Kabak_tatl%C4%B1s%C4%B1.jpg/640px-Kabak_tatl%C4%B1s%C4%B1.jpg",
+          "sure": "40 dk"
+        }
+      ],
+      "toplam_sure": 145
+    },
+    {
+      "menu_id": 4,
+      "gun_basligi": "Perşembe: Pratik ve Lezzetli",
+      "icerik": [
+        {
+          "tur": "🥣 Çorba",
+          "isim": "Domates Çorbası",
+          "resim": "https://images.unsplash.com/photo-1547592166-23acbe34071b?w=600&q=80",
+          "sure": "20 dk"
+        },
+        {
+          "tur": "🥘 Ana Yemek",
+          "isim": "Fırında Tavuk Patates",
+          "resim": "https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80",
+          "sure": "50 dk"
+        },
+        {
+          "tur": "🍚 Eşlikçi",
+          "isim": "Salçalı Makarna",
+          "resim": "https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?w=600&q=80",
+          "sure": "15 dk"
+        },
+        {
+          "tur": "🥗 Salata/Meze",
+          "isim": "Yoğurtlu Havuç Tarator",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Havu%C3%A7_tarator_-_meze.jpg/640px-Havu%C3%A7_tarator_-_meze.jpg",
+          "sure": "10 dk"
+        },
+        {
+          "tur": "🍰 Tatlı",
+          "isim": "Supangle",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Supangle.jpg/640px-Supangle.jpg",
+          "sure": "20 dk"
+        }
+      ],
+      "toplam_sure": 115
+    },
+    {
+      "menu_id": 5,
+      "gun_basligi": "Cuma: Saray Mutfağı",
+      "icerik": [
+        {
+          "tur": "🥣 Çorba",
+          "isim": "Düğün Çorbası",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Yayla_%C3%A7orbas%C4%B1_-_Ankara.jpg/640px-Yayla_%C3%A7orbas%C4%B1_-_Ankara.jpg",
+          "sure": "40 dk"
+        },
+        {
+          "tur": "🥘 Ana Yemek",
+          "isim": "Hünkar Beğendi",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/H%C3%BCnkarbe%C4%9Fendi.jpg/640px-H%C3%BCnkarbe%C4%9Fendi.jpg",
+          "sure": "65 dk"
+        },
+        {
+          "tur": "🍚 Eşlikçi",
+          "isim": "Gavurdağı Salatası",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Gavurda%C4%9F%C4%B1_salatas%C4%B1.jpg/640px-Gavurda%C4%9F%C4%B1_salatas%C4%B1.jpg",
+          "sure": "15 dk"
+        },
+        {
+          "tur": "🥗 Salata/Meze",
+          "isim": "Zeytinyağlı Enginar",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Zeytinya%C4%9Fl%C4%B1_Enginar.jpg/640px-Zeytinya%C4%9Fl%C4%B1_Enginar.jpg",
+          "sure": "45 dk"
+        },
+        {
+          "tur": "🍰 Tatlı",
+          "isim": "Revani",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Revani_dessert.jpg/640px-Revani_dessert.jpg",
+          "sure": "50 dk"
+        }
+      ],
+      "toplam_sure": 215
+    },
+    {
+      "menu_id": 6,
+      "gun_basligi": "Cumartesi: Hamur İşi Ziyafeti",
+      "icerik": [
+        {
+          "tur": "🥣 Çorba",
+          "isim": "Tarhana Çorbası",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Tarhana_soup.jpg/640px-Tarhana_soup.jpg",
+          "sure": "30 dk"
+        },
+        {
+          "tur": "🥘 Ana Yemek",
+          "isim": "Kayseri Mantısı",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Mant%C4%B1.jpg/640px-Mant%C4%B1.jpg",
+          "sure": "80 dk"
+        },
+        {
+          "tur": "🍚 Eşlikçi",
+          "isim": "Zeytinyağlı Yaprak Sarma",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Zeytinya%C4%9Fl%C4%B1_yaprak_sarmas%C4%B1.jpg/640px-Zeytinya%C4%9Fl%C4%B1_yaprak_sarmas%C4%B1.jpg",
+          "sure": "90 dk"
+        },
+        {
+          "tur": "🥗 Salata/Meze",
+          "isim": "Çoban Salatası",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/%C3%87oban_salatas%C4%B1.jpg/640px-%C3%87oban_salatas%C4%B1.jpg",
+          "sure": "10 dk"
+        },
+        {
+          "tur": "🍰 Tatlı",
+          "isim": "Kazandibi",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Kazandibi.jpg/640px-Kazandibi.jpg",
+          "sure": "40 dk"
+        }
+      ],
+      "toplam_sure": 250
+    },
+    {
+      "menu_id": 7,
+      "gun_basligi": "Pazar: Aile Sofrası",
+      "icerik": [
+        {
+          "tur": "🥣 Çorba",
+          "isim": "Şehriye Çorbası",
+          "resim": "https://images.unsplash.com/photo-1578859296722-e3d1fcafbc2f?w=600&q=80",
+          "sure": "20 dk"
+        },
+        {
+          "tur": "🥘 Ana Yemek",
+          "isim": "Orman Kebabı (Tas Kebabı)",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Tas_kebab%C4%B1_ve_pilav.jpg/640px-Tas_kebab%C4%B1_ve_pilav.jpg",
+          "sure": "60 dk"
+        },
+        {
+          "tur": "🍚 Eşlikçi",
+          "isim": "Patates Püresi",
+          "resim": "https://images.unsplash.com/photo-1618797931383-75c1d392190b?w=600&q=80",
+          "sure": "30 dk"
+        },
+        {
+          "tur": "🥗 Salata/Meze",
+          "isim": "Közlenmiş Patlıcan Salatası",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Patl%C4%B1can_salatas%C4%B1.jpg/640px-Patl%C4%B1can_salatas%C4%B1.jpg",
+          "sure": "20 dk"
+        },
+        {
+          "tur": "🍰 Tatlı",
+          "isim": "Fıstıklı Baklava",
+          "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Baklava%281%29.png/640px-Baklava%281%29.png",
+          "sure": "120 dk"
+        }
+      ],
+      "toplam_sure": 250
+    }
+  ]
+}
