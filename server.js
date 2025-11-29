@@ -6,8 +6,8 @@ app.use(cors()); // Flutter erişimi için izin
 
 // --- DOSYALARI İÇERİ AL (IMPORT) ---
 // data klasörünün içindeki iki dosyayı da çağırıyoruz
-const haftalikMenuData = require('./data/haftalik_menu.json');
-const yemeklerData = require('./data/yemekler.json'); 
+const haftalikMenuData = require('./data/endogru_haftalik_menuler.json');
+const yemeklerData = require('./data/endogru_tarifler.json'); 
 
 const PORT = process.env.PORT || 3000;
 
