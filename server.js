@@ -4,11 +4,20 @@ const app = express();
 
 app.use(cors());
 
+// --- VERİ DOSYALARI ---
 const haftalikMenuData = require('./data/endogru_haftalik_menuler.json');
 const yemeklerData = require('./data/endogru_tarifler.json');
+// Trivia bilgileri (Eğer dosya yoksa hata vermemesi için try-catch bloğuna alabilirsin veya direkt require yapabilirsin)
+let triviaData = [];
+try {
+    triviaData = require('./data/trivia_bilgileri.json');
+} catch (e) {
+    console.log("Trivia dosyası bulunamadı veya hatalı.");
+}
 
 const PORT = process.env.PORT || 3000;
 
+// --- DOKÜMANTASYON (HTML) ---
 app.get('/', (req, res) => {
     res.send(`
         <!DOCTYPE html>
@@ -16,7 +25,7 @@ app.get('/', (req, res) => {
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Listify API Dokümantasyonu</title>
+            <title>Listify API v5.4</title>
             <style>
                 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f4f4f9; color: #333; }
                 h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
@@ -24,84 +33,64 @@ app.get('/', (req, res) => {
                 .endpoint { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }
                 .method { display: inline-block; background: #27ae60; color: #fff; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 0.9em; margin-right: 10px; }
                 .url { font-family: monospace; font-size: 1.1em; color: #d35400; }
-                ul { line-height: 1.6; }
-                code { background: #eee; padding: 2px 5px; border-radius: 3px; font-family: monospace; color: #c0392b; }
-                a { color: #2980b9; text-decoration: none; }
-                a:hover { text-decoration: underline; }
                 .param-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
                 .param-table th, .param-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
                 .param-table th { background-color: #f2f2f2; }
+                code { background: #eee; padding: 2px 5px; border-radius: 3px; font-family: monospace; color: #c0392b; }
+                a { color: #2980b9; text-decoration: none; }
             </style>
         </head>
         <body>
-            <h1>🚀 Listify API v5.3 Dokümantasyonu</h1>
-            <p>Bu API, Listify mobil uygulaması için haftalık yemek menüleri, tarif detayları ve filtreleme seçenekleri sunar.</p>
+            <h1>🚀 Listify API v5.4 Dokümantasyonu</h1>
 
-            <!-- ENDPOINT 1 -->
+            <!-- 1. Haftalık Menü -->
             <div class="endpoint">
                 <h2>1. Haftalık Menü</h2>
                 <span class="method">GET</span> <span class="url">/api/haftalik-menu</span>
-                <p>14 günlük döngüye göre (7 gün v1 + 7 gün v2) haftalık menüyü getirir.</p>
-                
-                <h3>Parametreler:</h3>
-                <table class="param-table">
-                    <tr><th>Parametre</th><th>Tip</th><th>Açıklama</th></tr>
-                    <tr><td><code>gun</code></td><td>Sayı (1-14)</td><td>Belirtilen günün menüsünü getirir. 1-7 arası Versiyon 1, 8-14 arası Versiyon 2 döner. Boş bırakılırsa tüm ham veriyi (JSON) döner.</td></tr>
-                </table>
-
-                <h3>Örnekler:</h3>
+                <p>14 günlük döngüye göre haftalık menüyü getirir.</p>
                 <ul>
-                    <li><a href="/api/haftalik-menu" target="_blank">Tüm Menü Verisi (Ham JSON)</a></li>
-                    <li><a href="/api/haftalik-menu?gun=1" target="_blank">1. Gün (Pazartesi - v1)</a></li>
-                    <li><a href="/api/haftalik-menu?gun=8" target="_blank">8. Gün (Pazartesi - v2)</a></li>
+                    <li><a href="/api/haftalik-menu?gun=1" target="_blank">?gun=1 (Örnek)</a></li>
                 </ul>
             </div>
 
-            <!-- ENDPOINT 2 -->
+            <!-- 2. Yemekler -->
             <div class="endpoint">
                 <h2>2. Yemekler (Arama & Filtreleme)</h2>
                 <span class="method">GET</span> <span class="url">/api/yemekler</span>
-                <p>Yemek tariflerini listeler, arar ve detaylı filtreleme yapar. Çoklu filtreleme destekler.</p>
+                <p>Yemek tariflerini listeler ve filtreler.</p>
+                <ul>
+                    <li><a href="/api/yemekler?hazirlama_suresi=30" target="_blank">?hazirlama_suresi=30</a></li>
+                    <li><a href="/api/yemekler?ulke=turk" target="_blank">?ulke=turk</a></li>
+                </ul>
+            </div>
+
+            <!-- 3. Meta -->
+            <div class="endpoint">
+                <h2>3. Meta Veriler</h2>
+                <span class="method">GET</span> <span class="url">/api/meta</span>
+                <p>Filtreleme seçenekleri için tüm kategorileri döner.</p>
+            </div>
+
+            <!-- 4. Trivia (YENİ) -->
+            <div class="endpoint">
+                <h2>4. Trivia / İlginç Bilgiler</h2>
+                <span class="method">GET</span> <span class="url">/api/trivia</span>
+                <p>Yükleme ekranları için rastgele bir ilginç bilgi döndürür.</p>
                 
                 <h3>Parametreler:</h3>
                 <table class="param-table">
-                    <tr><th>Parametre</th><th>Örnek</th><th>Açıklama</th></tr>
-                    <tr><td><code>id</code></td><td>1</td><td>Tekil yemek ID'sine göre getirir.</td></tr>
-                    <tr><td><code>yemek_adi</code></td><td>mantı</td><td>İsminde geçen kelimeye göre arar.</td></tr>
-                    <tr><td><code>ana_kategori</code></td><td>Ana Yemekler</td><td>Ana kategoriye göre filtreler.</td></tr>
-                    <tr><td><code>kategori</code></td><td>Hamur İşi</td><td>Alt kategoriye göre filtreler.</td></tr>
-                    <tr><td><code>ulke</code></td><td>turk</td><td>Mutfağına göre filtreler (örn: turk, italyan).</td></tr>
-                    <tr><td><code>hazirlama_suresi</code></td><td>30</td><td>Belirtilen dakikaya <strong>eşit veya daha kısa</strong> süren yemekleri getirir.</td></tr>
-                    <tr><td><code>etiketler</code></td><td>vegan</td><td>Etiket listesinde arama yapar.</td></tr>
+                    <tr><th>Parametre</th><th>Durum</th><th>Açıklama</th></tr>
+                    <tr><td><code>dil</code></td><td><span style="color:red; font-weight:bold;">ZORUNLU</span></td><td>İstenen dil kodu (örn: tr, en).</td></tr>
                 </table>
 
                 <h3>Örnekler:</h3>
                 <ul>
-                    <li><a href="/api/yemekler" target="_blank">Tüm Yemekler</a></li>
-                    <li><a href="/api/yemekler?ana_kategori=Ana Yemekler" target="_blank">Sadece Ana Yemekler</a></li>
-                    <li><a href="/api/yemekler?hazirlama_suresi=30" target="_blank">30 dk ve altı pratik yemekler</a></li>
-                    <li><a href="/api/yemekler?ulke=turk&kategori=Kebaplar" target="_blank">Türk Mutfağı ve Kebaplar</a></li>
+                    <li><a href="/api/trivia?dil=tr" target="_blank">/api/trivia?dil=tr</a> (Rastgele Türkçe Bilgi)</li>
+                    <li><a href="/api/trivia?dil=en" target="_blank">/api/trivia?dil=en</a> (Rastgele İngilizce Bilgi)</li>
                 </ul>
             </div>
 
-            <!-- ENDPOINT 3 -->
-            <div class="endpoint">
-                <h2>3. Meta Veriler (Filtre Seçenekleri)</h2>
-                <span class="method">GET</span> <span class="url">/api/meta</span>
-                <p>Uygulama içindeki filtreleme menülerini (Dropdown/Chip) doldurmak için benzersiz liste verilerini döner.</p>
-                
-                <h3>Dönen Veriler:</h3>
-                <ul>
-                    <li><code>ana_kategoriler</code>: Mevcut tüm ana kategoriler.</li>
-                    <li><code>alt_kategoriler</code>: Mevcut tüm alt kategoriler.</li>
-                    <li><code>ulkeler</code>: Kayıtlı mutfak/ülke türleri.</li>
-                    <li><code>etiketler</code>: Kullanılan tüm etiketler.</li>
-                    <li><code>sureler</code>: Veritabanındaki süre değerleri.</li>
-                </ul>
-                <p><a href="/api/meta" target="_blank">Meta Verilerini Gör</a></p>
-            </div>
-
-            <p style="text-align: center; color: #7f8c8d; font-size: 0.9em;">Listify Backend © 2024</p>
+            <p style="text-align: center; color: #7f8c8d; margin-top: 40px;">Listify Backend © 2024</p>
         </body>
         </html>
     `);
@@ -133,7 +122,7 @@ app.get('/api/haftalik-menu', (req, res) => {
             istenen_gun_kodu: istenenGun,
             gun_adi: gunVerisi.gun_adi,
             versiyon_bilgisi: secilenMenu.versiyon_id,
-            ulke: secilenMenu.ulke, // YENİ: JSON'daki ülke bilgisini response'a ekledik
+            ulke: secilenMenu.ulke,
             baslik: secilenMenu.baslik,
             yemekler: secilenMenu.yemekler
         });
@@ -142,31 +131,16 @@ app.get('/api/haftalik-menu', (req, res) => {
     }
 });
 
-// --- 2. ENDPOINT: Yemekler (Arama ve Filtreleme) ---
+// --- 2. ENDPOINT: Yemekler ---
 app.get('/api/yemekler', (req, res) => {
     let liste = yemeklerData.yemekler ? yemeklerData.yemekler : yemeklerData;
-    
-    // YENİ: 'ulke' parametresi eklendi
     const { id, yemek_adi, ana_kategori, kategori, etiketler, hazirlama_suresi, ulke } = req.query;
 
     if (id) liste = liste.filter(y => y.id == id);
-
-    if (yemek_adi) {
-        liste = liste.filter(y => y.yemek_adi && y.yemek_adi.toLowerCase().includes(yemek_adi.toLowerCase()));
-    }
-
-    if (ana_kategori) {
-        liste = liste.filter(y => y.ana_kategori && y.ana_kategori.toLowerCase().includes(ana_kategori.toLowerCase()));
-    }
-
-    if (kategori) {
-        liste = liste.filter(y => y.kategori && y.kategori.toLowerCase().includes(kategori.toLowerCase()));
-    }
-
-    // YENİ: Ülke Filtresi (Örn: ?ulke=turk)
-    if (ulke) {
-        liste = liste.filter(y => y.ulke && y.ulke.toLowerCase().includes(ulke.toLowerCase()));
-    }
+    if (yemek_adi) liste = liste.filter(y => y.yemek_adi && y.yemek_adi.toLowerCase().includes(yemek_adi.toLowerCase()));
+    if (ana_kategori) liste = liste.filter(y => y.ana_kategori && y.ana_kategori.toLowerCase().includes(ana_kategori.toLowerCase()));
+    if (kategori) liste = liste.filter(y => y.kategori && y.kategori.toLowerCase().includes(kategori.toLowerCase()));
+    if (ulke) liste = liste.filter(y => y.ulke && y.ulke.toLowerCase().includes(ulke.toLowerCase()));
 
     if (hazirlama_suresi) {
         const maksimumSure = parseInt(hazirlama_suresi);
@@ -181,9 +155,7 @@ app.get('/api/yemekler', (req, res) => {
 
     if (etiketler) {
         const arananEtiket = etiketler.toLowerCase();
-        liste = liste.filter(y =>
-            y.etiketler && y.etiketler.some(etiket => etiket.toLowerCase().includes(arananEtiket))
-        );
+        liste = liste.filter(y => y.etiketler && y.etiketler.some(etiket => etiket.toLowerCase().includes(arananEtiket)));
     }
 
     res.json(liste);
@@ -197,37 +169,70 @@ app.get('/api/yemekler/:id', (req, res) => {
     else res.status(404).json({ mesaj: "Yemek bulunamadı" });
 });
 
-// --- 4. YENİ ENDPOINT: Meta Veriler (Filtre Seçenekleri) ---
+// --- 4. ENDPOINT: Meta Veriler ---
 app.get('/api/meta', (req, res) => {
     const liste = yemeklerData.yemekler ? yemeklerData.yemekler : yemeklerData;
-
     const anaKategorilerSet = new Set();
     const altKategorilerSet = new Set();
     const etiketlerSet = new Set();
     const surelerSet = new Set();
-    const ulkelerSet = new Set(); // YENİ: Ülkeler listesi
+    const ulkelerSet = new Set();
 
     liste.forEach(yemek => {
         if (yemek.ana_kategori) anaKategorilerSet.add(yemek.ana_kategori);
         if (yemek.kategori) altKategorilerSet.add(yemek.kategori);
         if (yemek.hazirlama_suresi) surelerSet.add(yemek.hazirlama_suresi);
-        if (yemek.ulke) ulkelerSet.add(yemek.ulke); // YENİ: Ülkeyi listeye ekle
-        
+        if (yemek.ulke) ulkelerSet.add(yemek.ulke);
         if (yemek.etiketler && Array.isArray(yemek.etiketler)) {
             yemek.etiketler.forEach(etiket => etiketlerSet.add(etiket));
         }
     });
 
-    const response = {
+    res.json({
         toplam_yemek_sayisi: liste.length,
         ana_kategoriler: Array.from(anaKategorilerSet).sort(),
         alt_kategoriler: Array.from(altKategorilerSet).sort(),
-        ulkeler: Array.from(ulkelerSet).sort(), // YENİ: Çıktıya ekle
+        ulkeler: Array.from(ulkelerSet).sort(),
         etiketler: Array.from(etiketlerSet).sort(),
         sureler: Array.from(surelerSet).sort()
-    };
+    });
+});
 
-    res.json(response);
+// --- 5. ENDPOINT: Trivia / İlginç Bilgiler (YENİ) ---
+// Kullanım: /api/trivia?dil=tr
+// Dil parametresi ZORUNLUDUR. Tek bir rastgele bilgi döner.
+app.get('/api/trivia', (req, res) => {
+    const dil = req.query.dil;
+
+    // 1. Dil parametresi kontrolü
+    if (!dil) {
+        return res.status(400).json({ 
+            hata: "Dil parametresi zorunludur.", 
+            ornek_kullanim: "/api/trivia?dil=tr" 
+        });
+    }
+
+    // JSON yapısı { "bilgiler": [...] } veya direkt [...] olabilir.
+    // Garantiye almak için kontrol ediyoruz.
+    const tumBilgiler = triviaData.bilgiler ? triviaData.bilgiler : triviaData;
+
+    if (!Array.isArray(tumBilgiler)) {
+        return res.status(500).json({ hata: "Trivia veri yapısı sunucuda hatalı." });
+    }
+
+    // 2. Dile göre filtreleme (Büyük/Küçük harf duyarsız)
+    const filtrelenmis = tumBilgiler.filter(item => 
+        item.dil && item.dil.toLowerCase() === dil.toLowerCase()
+    );
+
+    if (filtrelenmis.length === 0) {
+        return res.status(404).json({ mesaj: `Bu dilde (${dil}) herhangi bir bilgi bulunamadı.` });
+    }
+
+    // 3. Rastgele bir tane seçme
+    const randomBilgi = filtrelenmis[Math.floor(Math.random() * filtrelenmis.length)];
+
+    res.json(randomBilgi);
 });
 
 app.listen(PORT, () => {
