@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Geleneksel Kayseri Mantısı",
     "ana_kategori": "Ana Yemekler",
     "kategori": "Hamur İşi",
@@ -39,7 +39,7 @@
   },
   {
     "id": 2,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Zeytinyağlı Yaprak Sarma",
     "ana_kategori": "Başlangıçlar ve Mezeler",
     "kategori": "Zeytinyağlılar",
@@ -80,7 +80,7 @@
   },
   {
     "id": 3,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Orijinal Zırh Adana Kebap",
     "ana_kategori": "Ana Yemekler",
     "kategori": "Kebaplar",
@@ -118,7 +118,7 @@
   },
   {
     "id": 4,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Hünkar Beğendi",
     "ana_kategori": "Ana Yemekler",
     "kategori": "Saray Mutfağı",
@@ -156,7 +156,7 @@
   },
   {
     "id": 5,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Tam Kıvamında Mercimek Köftesi",
     "ana_kategori": "Başlangıçlar ve Mezeler",
     "kategori": "Bakliyat",
@@ -195,7 +195,7 @@
   },
   {
     "id": 6,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Karnıyarık",
     "ana_kategori": "Ana Yemekler",
     "kategori": "Sebze Yemekleri",
@@ -232,7 +232,7 @@
   },
   {
     "id": 7,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Taş Fırın Tadında Lahmacun",
     "ana_kategori": "Ana Yemekler",
     "kategori": "Hamur İşi",
@@ -270,7 +270,7 @@
   },
   {
     "id": 8,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Etsiz Çiğ Köfte",
     "ana_kategori": "Başlangıçlar ve Mezeler",
     "kategori": "Yöresel",
@@ -308,7 +308,7 @@
   },
   {
     "id": 9,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Siirt Usulü Perde Pilavı",
     "ana_kategori": "Ana Yemekler",
     "kategori": "Yöresel Pilavlar",
@@ -347,7 +347,7 @@
   },
   {
     "id": 10,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Hatay Usulü Künefe",
     "ana_kategori": "Tatlılar",
     "kategori": "Şerbetli Tatlılar",
@@ -387,7 +387,7 @@
   },
   {
     "id": 11,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Bursa İskender Kebap (Ev Usulü)",
     "ana_kategori": "Ana Yemekler",
     "kategori": "Kebaplar",
@@ -424,7 +424,7 @@
   },
   {
     "id": 12,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Haşlama İçli Köfte",
     "ana_kategori": "Ana Yemekler",
     "kategori": "Yöresel",
@@ -459,7 +459,7 @@
   },
   {
     "id": 13,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Hamsiköy Usulü Fırın Sütlaç",
     "ana_kategori": "Tatlılar",
     "kategori": "Sütlü Tatlılar",
@@ -496,7 +496,7 @@
   },
   {
     "id": 14,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Lokanta Usulü Ezogelin Çorbası",
     "ana_kategori": "Çorbalar",
     "kategori": "Bakliyat",
@@ -534,7 +534,7 @@
   },
   {
     "id": 15,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Gaziantep Usulü Ali Nazik",
     "ana_kategori": "Ana Yemekler",
     "kategori": "Gaziantep Mutfağı",
@@ -570,7 +570,7 @@
   },
   {
     "id": 16,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Mersin Tantuni",
     "ana_kategori": "Ana Yemekler",
     "kategori": "Sokak Lezzetleri",
@@ -607,7 +607,7 @@
   },
   {
     "id": 17,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Orijinal Menemen",
     "ana_kategori": "Kahvaltılıklar",
     "kategori": "Pratik Yemekler",
@@ -644,7 +644,7 @@
   },
   {
     "id": 18,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Çıtır Kabak Mücver",
     "ana_kategori": "Başlangıçlar ve Mezeler",
     "kategori": "Sebze Yemekleri",
@@ -683,7 +683,7 @@
   },
   {
     "id": 19,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Trabzon Usulü Hamsi Tava",
     "ana_kategori": "Ana Yemekler",
     "kategori": "Deniz Ürünleri",
@@ -722,7 +722,7 @@
   },
   {
     "id": 20,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Gerçek Peynirli Su Böreği",
     "ana_kategori": "Hamur İşi",
     "kategori": "Börekler",
@@ -762,7 +762,7 @@
   },
   {
     "id": 21,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Tarihi Esnaf Lokantası Usulü Kuru Fasulye",
     "ana_kategori": "Ana Yemekler",
     "kategori": "Bakliyat",
@@ -803,7 +803,7 @@
   },
   {
     "id": 22,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Kesilmeyen Yayla Çorbası",
     "ana_kategori": "Çorbalar",
     "kategori": "Yoğurtlu Çorbalar",
@@ -841,7 +841,7 @@
   },
   {
     "id": 23,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Lokum Kıvamında Tas Kebabı",
     "ana_kategori": "Ana Yemekler",
     "kategori": "Et Yemekleri",
@@ -880,7 +880,7 @@
   },
   {
     "id": 24,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Kararmayan Zeytinyağlı Enginar",
     "ana_kategori": "Başlangıçlar ve Mezeler",
     "kategori": "Zeytinyağlılar",
@@ -914,7 +914,7 @@
   },
   {
     "id": 25,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Kıyır Kıyır Pastane Şekerparesi",
     "ana_kategori": "Tatlılar",
     "kategori": "Şerbetli Tatlılar",
@@ -954,7 +954,7 @@
   },
   {
     "id": 26,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Restoran Usulü Beyti Kebabı",
     "ana_kategori": "Ana Yemekler",
     "kategori": "Kebaplar",
@@ -991,7 +991,7 @@
   },
   {
     "id": 27,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Ortaköy Kumpir (Evde Yapımı)",
     "ana_kategori": "Ana Yemekler",
     "kategori": "Sokak Lezzetleri",
@@ -1027,7 +1027,7 @@
   },
   {
     "id": 28,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Sıcak Pastırmalı Humus",
     "ana_kategori": "Başlangıçlar ve Mezeler",
     "kategori": "Hatay Mutfağı",
@@ -1065,7 +1065,7 @@
   },
   {
     "id": 29,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Bayatlamayan Dereotlu Poğaça",
     "ana_kategori": "Hamur İşi",
     "kategori": "Kahvaltılık",
@@ -1105,7 +1105,7 @@
   },
   {
     "id": 30,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Tam Ölçülü Sütlü İrmik Helvası",
     "ana_kategori": "Tatlılar",
     "kategori": "Helvalar",
@@ -1142,7 +1142,7 @@
   },
   {
     "id": 31,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Orijinal Kadınbudu Köfte",
     "ana_kategori": "Ana Yemekler",
     "kategori": "Köfteler",
@@ -1183,7 +1183,7 @@
   },
   {
     "id": 32,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Tam Ölçülü Altın Gün Kısırı",
     "ana_kategori": "Başlangıçlar ve Mezeler",
     "kategori": "Çay Saati",
@@ -1222,7 +1222,7 @@
   },
   {
     "id": 33,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "İstanbul Usulü Zeytinyağlı Biber Dolması",
     "ana_kategori": "Başlangıçlar ve Mezeler",
     "kategori": "Zeytinyağlılar",
@@ -1262,7 +1262,7 @@
   },
   {
     "id": 34,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Esnaf Lokantası Usulü İzmir Köfte",
     "ana_kategori": "Ana Yemekler",
     "kategori": "Fırın Yemekleri",
@@ -1298,7 +1298,7 @@
   },
   {
     "id": 35,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Gerçek Şakşuka",
     "ana_kategori": "Başlangıçlar ve Mezeler",
     "kategori": "Kızartmalar",
@@ -1336,7 +1336,7 @@
   },
   {
     "id": 36,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Meşhur Sokak Pilavı (Tavuklu Nohutlu)",
     "ana_kategori": "Ana Yemekler",
     "kategori": "Pilavlar",
@@ -1375,7 +1375,7 @@
   },
   {
     "id": 37,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Hatay Tepsi Kebabı",
     "ana_kategori": "Ana Yemekler",
     "kategori": "Yöresel",
@@ -1411,7 +1411,7 @@
   },
   {
     "id": 38,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Orijinal Çerkez Tavuğu",
     "ana_kategori": "Başlangıçlar ve Mezeler",
     "kategori": "Soğuk Yemekler",
@@ -1450,7 +1450,7 @@
   },
   {
     "id": 39,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Tam Kıvamında Revani",
     "ana_kategori": "Tatlılar",
     "kategori": "Şerbetli Tatlılar",
@@ -1488,7 +1488,7 @@
   },
   {
     "id": 40,
-    "ulke": "Turk",
+    "ulke": "turk",
     "yemek_adi": "Anne Usulü Mozaik Pasta",
     "ana_kategori": "Tatlılar",
     "kategori": "Bisküvili Tatlılar",
