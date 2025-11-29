@@ -5,27 +5,11 @@ const app = express();
 app.use(cors()); // Flutter erişimi için izin
 
 // --- DOSYALARI İÇERİ AL (IMPORT) ---
-// data klasörünün içindeki iki dosyayı da çağırıyoruz
+// JSON dosyanın yapısı: { "meta_data": {...}, "gunler": [...] }
 const haftalikMenuData = require('./data/endogru_haftalik_menuler.json');
 const yemeklerData = require('./data/endogru_tarifler.json');
 
 const PORT = process.env.PORT || 3000;
-
-// --- YARDIMCI FONKSİYON: Tarif Bulucu ---
-// Menüdeki yemek ismine göre tarif detayını bulur
-function tarifDetayiBul(yemekIsmi) {
-    if (!yemekIsmi) return null;
-    
-    // Veri yapısı kontrolü: { "yemekler": [...] } mi yoksa direkt [...] mi?
-    const tumYemekler = yemeklerData.yemekler ? yemeklerData.yemekler : yemeklerData;
-
-    // Tam eşleşme veya içerik eşleşmesi (Büyük/küçük harf duyarsız)
-    const bulunan = tumYemekler.find(y => 
-        y.ad && y.ad.toLowerCase() === yemekIsmi.toLowerCase()
-    );
-
-    return bulunan || { ad: yemekIsmi, tarif: "Tarif bulunamadı." };
-}
 
 // --- ANA SAYFA ---
 app.get('/', (req, res) => {
@@ -34,87 +18,128 @@ app.get('/', (req, res) => {
         <p>Endpointler:</p>
         <ul>
             <li><a href="/api/haftalik-menu">/api/haftalik-menu</a> (Tüm Liste)</li>
-            <li><a href="/api/haftalik-menu?gun=1">/api/haftalik-menu?gun=1</a> (Gün Detayı ve Tarifler)</li>
-            <li><a href="/api/yemekler">/api/yemekler</a> (Tüm Yemek Arşivi)</li>
+            <li><a href="/api/haftalik-menu?gun=1">/api/haftalik-menu?gun=1</a> (Gün 1 - v1)</li>
+            <li><a href="/api/yemekler?ana_kategori=Ana Yemekler">/api/yemekler?ana_kategori=...</a> (Filtreleme Örneği)</li>
         </ul>
     `);
 });
 
-// --- 1. ENDPOINT: Haftalık Menü (GÜNCELLENDİ) ---
-// Kullanım: 
-// - Tüm liste: /api/haftalik-menu
-// - Özel Gün: /api/haftalik-menu?gun=8 (Versiyon 2, 1. Gün)
+// --- 1. ENDPOINT: Haftalık Menü ---
 app.get('/api/haftalik-menu', (req, res) => {
-    // JSON yapısının dizi mi yoksa nesne mi olduğunu garantiye alalım
-    const menuler = haftalikMenuData.menuler ? haftalikMenuData.menuler : haftalikMenuData;
-    
     const gunParam = req.query.gun;
 
-    // A) Eğer ?gun=X parametresi YOKSA tüm listeyi döndür (Eski hali)
+    // Veri senin JSON yapında "gunler" dizisinin içinde.
+    const gunlerListesi = haftalikMenuData.gunler;
+
+    // Hata Kontrolü
+    if (!gunlerListesi) {
+        return res.status(500).json({ 
+            hata: "Veri kaynağı hatası. 'gunler' listesi bulunamadı.",
+            mevcut_veri_keys: Object.keys(haftalikMenuData)
+        });
+    }
+
+    // A) Eğer ?gun=X parametresi YOKSA tüm ham veriyi döndür
     if (!gunParam) {
-        return res.json(menuler);
+        return res.json(haftalikMenuData);
     }
 
     // B) Eğer ?gun=X parametresi VARSA
     const istenenGun = parseInt(gunParam);
 
     if (isNaN(istenenGun) || istenenGun < 1) {
-        return res.status(400).json({ hata: "Geçersiz gün değeri. Lütfen sayı girin." });
+        return res.status(400).json({ hata: "Geçersiz gün değeri. Sayı giriniz." });
     }
 
     // --- MANTIK: 14 GÜNLÜK DÖNGÜ ---
-    // Eğer menü listen 14 elemanlıysa (7 gün v1 + 7 gün v2):
-    // gun=1 -> index 0
-    // gun=8 -> index 7
-    // gun=15 -> index 0 (Başa döner - Modulo işlemi)
-    const index = (istenenGun - 1) % 14; 
-    
-    // İlgili günün menüsünü al
-    let secilenMenu = menuler[index];
+    const donguIndex = (istenenGun - 1) % 14; 
+    const gunIndex = donguIndex % 7;
+    const versiyonIndex = donguIndex < 7 ? 0 : 1;
 
-    if (!secilenMenu) {
-        return res.status(404).json({ mesaj: "Bu güne ait menü verisi bulunamadı." });
-    }
-
-    // --- TARİFLERİ İÇERİ GÖMME (ENRICHMENT) ---
-    // Menüdeki yemek isimlerini alıp, tarif detaylarını içine ekliyoruz.
-    // Örnek: Menüde sadece "Mercimek Çorbası" yazar, biz buraya tarifini ekleyeceğiz.
-    
-    // Yeni bir obje oluşturup orijinal veriyi bozmadan detayları ekleyelim
-    const detayliMenu = {
-        ...secilenMenu,
-        istenen_gun_kodu: istenenGun,
-        versiyon_bilgisi: index < 7 ? "Versiyon 1" : "Versiyon 2",
+    try {
+        const gunVerisi = gunlerListesi[gunIndex];
         
-        // Menüdeki yemekleri (Örn: corba, ana_yemek, yan_yemek) bulup detaylandırıyoruz
-        // NOT: JSON'daki anahtar isimlerine göre burayı düzenleyebilirsin.
-        yemek_detaylari: {
-            corba: tarifDetayiBul(secilenMenu.corba),      // JSON'da key 'corba' ise
-            ana_yemek: tarifDetayiBul(secilenMenu.ana_yemek), // JSON'da key 'ana_yemek' ise
-            yan_yemek: tarifDetayiBul(secilenMenu.yan_yemek), // JSON'da key 'yan_yemek' ise
-            tatli: tarifDetayiBul(secilenMenu.tatli)       // JSON'da key 'tatli' ise
+        if (!gunVerisi) {
+            return res.status(404).json({ mesaj: `Gün verisi bulunamadı (Index: ${gunIndex})` });
         }
-    };
 
-    res.json(detayliMenu);
+        const secilenMenu = gunVerisi.secenekler[versiyonIndex];
+
+        if (!secilenMenu) {
+            return res.status(404).json({ mesaj: "Bu gün için istenen menü versiyonu bulunamadı." });
+        }
+
+        res.json({
+            istenen_gun_kodu: istenenGun,
+            gun_adi: gunVerisi.gun_adi,
+            versiyon_bilgisi: secilenMenu.versiyon_id,
+            baslik: secilenMenu.baslik,
+            yemekler: secilenMenu.yemekler
+        });
+
+    } catch (error) {
+        console.error("Veri işleme hatası:", error);
+        res.status(500).json({ hata: "Sunucu tarafında veri işleme hatası." });
+    }
 });
 
-// --- 2. ENDPOINT: Yemekler (Akıllı Filtreleme ile) ---
+// --- 2. ENDPOINT: Yemekler (GELİŞMİŞ FİLTRELEME) ---
+// Desteklenen Parametreler: id, yemek_adi, ana_kategori, kategori, etiketler, hazirlama_suresi
 app.get('/api/yemekler', (req, res) => {
-    const kategori = req.query.kategori;
-    const liste = yemeklerData.yemekler ? yemeklerData.yemekler : yemeklerData;
+    // 1. Tüm yemek listesini hazırla
+    let liste = yemeklerData.yemekler ? yemeklerData.yemekler : yemeklerData;
 
+    // 2. Query parametrelerini al
+    const { id, yemek_adi, ana_kategori, kategori, etiketler, hazirlama_suresi } = req.query;
+
+    // 3. Adım adım filtreleme uygula (Zincirleme mantığı)
+    
+    // --- ID Filtresi ---
+    if (id) {
+        liste = liste.filter(y => y.id == id);
+    }
+
+    // --- Yemek Adı Filtresi (İçeriyorsa) ---
+    if (yemek_adi) {
+        liste = liste.filter(y => 
+            y.yemek_adi && y.yemek_adi.toLowerCase().includes(yemek_adi.toLowerCase())
+        );
+    }
+
+    // --- Ana Kategori Filtresi (Örn: Ana Yemekler) ---
+    if (ana_kategori) {
+        liste = liste.filter(y => 
+            y.ana_kategori && y.ana_kategori.toLowerCase().includes(ana_kategori.toLowerCase())
+        );
+    }
+
+    // --- Kategori Filtresi (Örn: Hamur İşi) ---
     if (kategori) {
-        const filtrelenmis = liste.filter(y => 
+        liste = liste.filter(y => 
             y.kategori && y.kategori.toLowerCase().includes(kategori.toLowerCase())
         );
-        res.json(filtrelenmis);
-    } else {
-        res.json(liste);
     }
+
+    // --- Hazırlama Süresi Filtresi (Örn: 90 dakika) ---
+    if (hazirlama_suresi) {
+        liste = liste.filter(y => 
+            y.hazirlama_suresi && y.hazirlama_suresi.toLowerCase().includes(hazirlama_suresi.toLowerCase())
+        );
+    }
+
+    // --- Etiket Filtresi (Dizi içinde arama) ---
+    // Örn: ?etiketler=yöresel -> Etiket listesinde "yöresel" geçenleri bulur
+    if (etiketler) {
+        const arananEtiket = etiketler.toLowerCase();
+        liste = liste.filter(y =>
+            y.etiketler && y.etiketler.some(etiket => etiket.toLowerCase().includes(arananEtiket))
+        );
+    }
+
+    res.json(liste);
 });
 
-// --- 3. ENDPOINT: Tek Yemek Detayı ---
+// --- 3. ENDPOINT: Tek Yemek Detayı (ID ile direkt erişim) ---
 app.get('/api/yemekler/:id', (req, res) => {
     const liste = yemeklerData.yemekler ? yemeklerData.yemekler : yemeklerData;
     const id = req.params.id;
@@ -128,5 +153,5 @@ app.get('/api/yemekler/:id', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Sunucu ${PORT} portunda data klasörü ile çalışıyor.`);
+    console.log(`Sunucu ${PORT} portunda çalışıyor.`);
 });
