@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Listify API v5.8</title>
+            <title>Listify API v6.0</title>
             <style>
                 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f4f4f9; color: #333; }
                 h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
@@ -39,12 +39,12 @@ app.get('/', (req, res) => {
             </style>
         </head>
         <body>
-            <h1>🚀 Listify API v5.8 Dokümantasyonu</h1>
+            <h1>🚀 Listify API v6.0 Dokümantasyonu</h1>
             
             <div class="endpoint">
                 <h2>1. Haftalık Menü</h2>
                 <span class="method">GET</span> <span class="url">/api/haftalik-menu</span>
-                <p><strong>Akıllı Takvim Modu:</strong> Girilen günü, mevcut ayın günü olarak kabul eder ve gerçek haftanın gününü (Pzt-Paz) hesaplar.</p>
+                <p><strong>Akıllı Takvim Modu:</strong> Girilen günü, mevcut ayın günü olarak kabul eder ve gerçek haftanın gününü hesaplar.</p>
                 <p>Parametre: <code>?gun=29</code> (Ayın 29. günü için menü getirir)</p>
             </div>
 
@@ -60,9 +60,10 @@ app.get('/', (req, res) => {
             </div>
 
             <div class="endpoint">
-                <h2>4. Trivia / İlginç Bilgiler</h2>
+                <h2>4. Günün Bilgisi (Trivia)</h2>
                 <span class="method">GET</span> <span class="url">/api/trivia</span>
-                <p>Parametre: <code>?dil=tr</code></p>
+                <p><strong>Günlük Rotasyon:</strong> Her gün otomatik olarak yeni bir bilgi seçilir. İstenirse manuel gün seçimi de yapılabilir.</p>
+                <p>Parametreler: <code>?dil=tr</code> (Zorunlu), <code>?gun=5</code> (Opsiyonel)</p>
             </div>
             
             <p style="text-align: center; color: #7f8c8d; margin-top: 40px;">Listify Backend © 2024</p>
@@ -71,7 +72,7 @@ app.get('/', (req, res) => {
     `);
 });
 
-// --- 1. ENDPOINT: Haftalık Menü (TAKVİM BAZLI GÜNCELLENDİ) ---
+// --- 1. ENDPOINT: Haftalık Menü ---
 app.get('/api/haftalik-menu', (req, res) => {
     const gunParam = req.query.gun;
     const gunlerListesi = haftalikMenuData.gunler;
@@ -82,36 +83,17 @@ app.get('/api/haftalik-menu', (req, res) => {
     let istenenGun = parseInt(gunParam);
     if (isNaN(istenenGun) || istenenGun < 1) return res.status(400).json({ hata: "Geçersiz gün değeri." });
 
-    // --- YENİ MANTIK: TAKVİM BAZLI HESAPLAMA ---
     try {
-        // Sunucunun o anki yıl ve ay bilgisini alıyoruz
         const bugun = new Date();
         const currentYear = bugun.getFullYear();
-        const currentMonth = bugun.getMonth(); // 0 (Ocak) - 11 (Aralık)
-
-        // Kullanıcının istediği gün ile o aya ait gerçek bir tarih oluşturuyoruz
-        // Örn: Yıl: 2025, Ay: 10 (Kasım), Gün: 29
+        const currentMonth = bugun.getMonth(); 
         const hedefTarih = new Date(currentYear, currentMonth, istenenGun);
 
-        // 1. ADIM: Haftanın Gerçek Gününü Bul (JS: 0=Pazar ... 6=Cumartesi)
         const jsGun = hedefTarih.getDay();
-
-        // 2. ADIM: JSON İndeksine Çevir (JSON: 0=Pazartesi ... 6=Pazar)
-        // Dönüşüm: (jsGun + 6) % 7
-        // Örn Pazar(0) -> 6, Pzt(1) -> 0, Cumartesi(6) -> 5
         const gunIndex = (jsGun + 6) % 7;
-
-        // 3. ADIM: Versiyon Belirle (Hafta sırasına göre)
-        // 1-7. Günler: v1
-        // 8-14. Günler: v2
-        // 15-21. Günler: v1
-        // 22-28. Günler: v2
-        // 29-31. Günler: v1
-        // Formül: (Gün - 1) / 7 işleminin tavanı tek mi çift mi?
         const haftaIndex = Math.floor((istenenGun - 1) / 7);
-        const versiyonIndex = haftaIndex % 2; // 0 ise v1 (index 0), 1 ise v2 (index 1)
+        const versiyonIndex = haftaIndex % 2;
 
-        // Veriyi Çek
         const gunVerisi = gunlerListesi[gunIndex];
         if (!gunVerisi) return res.status(404).json({ mesaj: "Gün verisi bulunamadı." });
 
@@ -120,9 +102,9 @@ app.get('/api/haftalik-menu', (req, res) => {
 
         res.json({
             istenen_gun_kodu: istenenGun,
-            takvim_tarihi: hedefTarih.toLocaleDateString('tr-TR'), // Debug için tarihi de dönelim
-            gun_adi: gunVerisi.gun_adi,         // Örn: Cumartesi
-            versiyon_bilgisi: secilenMenu.versiyon_id, // Örn: v1
+            takvim_tarihi: hedefTarih.toLocaleDateString('tr-TR'),
+            gun_adi: gunVerisi.gun_adi,
+            versiyon_bilgisi: secilenMenu.versiyon_id,
             ulke: secilenMenu.ulke,
             baslik: secilenMenu.baslik,
             yemekler: secilenMenu.yemekler
@@ -201,9 +183,10 @@ app.get('/api/meta', (req, res) => {
     });
 });
 
-// --- 5. ENDPOINT: Trivia (ÇOK DİLLİ) ---
+// --- 5. ENDPOINT: Trivia (GÜNLÜK ROTASYONLU + MANUEL SEÇİM) ---
 app.get('/api/trivia', (req, res) => {
     const dil = req.query.dil;
+    const gunParam = req.query.gun; // Opsiyonel parametre
 
     if (!dil || (dil !== 'tr' && dil !== 'en')) {
         return res.status(400).json({ hata: "Geçersiz veya eksik dil parametresi. (?dil=tr)" });
@@ -220,16 +203,46 @@ app.get('/api/trivia', (req, res) => {
         return res.status(500).json({ hata: "Trivia verisi bulunamadı." });
     }
 
-    const randomItem = tumBilgiler[Math.floor(Math.random() * tumBilgiler.length)];
-    const secilenMetin = dil === 'tr' ? randomItem.bilgi_tr : randomItem.bilgi_en;
+    let secilenIndex;
+    let tarihKodu;
+
+    if (gunParam) {
+        // --- MANUEL SEÇİM ---
+        const istenenGun = parseInt(gunParam);
+        if (isNaN(istenenGun)) {
+            return res.status(400).json({ hata: "Geçersiz gün parametresi. Lütfen sayı giriniz." });
+        }
+        
+        // Kullanıcının girdiği güne göre döngüsel index (1 girerse 0. index)
+        secilenIndex = (istenenGun - 1) % tumBilgiler.length;
+        
+        // Negatif kontrolü (eğer yanlışlıkla negatif girilirse)
+        if (secilenIndex < 0) secilenIndex += tumBilgiler.length;
+        
+        tarihKodu = istenenGun; // Manuel kod
+    } else {
+        // --- GÜNLÜK OTOMATİK ROTASYON ---
+        const now = new Date();
+        const trTime = now.getTime() + (3 * 60 * 60 * 1000); // TR saati ile zaman damgası
+        const birGunMs = 24 * 60 * 60 * 1000;
+        
+        const gunSayisi = Math.floor(trTime / birGunMs);
+        secilenIndex = gunSayisi % tumBilgiler.length;
+        tarihKodu = gunSayisi;
+    }
+
+    const gununBilgisi = tumBilgiler[secilenIndex];
+    const secilenMetin = dil === 'tr' ? gununBilgisi.bilgi_tr : gununBilgisi.bilgi_en;
 
     if (!secilenMetin) {
         return res.status(404).json({ mesaj: "Bu dilde içerik bulunamadı." });
     }
 
     res.json({
-        id: randomItem.id,
-        kategori: randomItem.kategori || "genel",
+        tarih_kodu: tarihKodu, // Debug için: Hangi gün sayısındayız
+        gunun_indexi: secilenIndex, // Debug için: Listeden kaçıncı eleman seçildi
+        id: gununBilgisi.id,
+        kategori: gununBilgisi.kategori || "genel",
         bilgi: secilenMetin,
         dil: dil
     });
