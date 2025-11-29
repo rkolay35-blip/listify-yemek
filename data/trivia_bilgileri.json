@@ -1,0 +1,83 @@
+{
+  "kaynak": "Spoonacular",
+  "veriler": [
+    {
+      "id": 1,
+      "bilgi_en": "The ’57’ on the Heinz ketchup bottle represents the number of pickle types the company once had.",
+      "bilgi_tr": "Heinz ketçap şişesindeki '57' ibaresi, şirketin bir zamanlar sahip olduğu turşu çeşitlerinin sayısını temsil eder.",
+      "kategori": "trivia"
+    },
+    {
+      "id": 2,
+      "bilgi_en": "The McHotDog is a hot dog available at McDonald's in Japan.",
+      "bilgi_tr": "McHotDog, sadece Japonya'daki McDonald's şubelerinde bulunan bir sosisli sandviçtir.",
+      "kategori": "trivia"
+    },
+    {
+      "id": 3,
+      "bilgi_en": "Gorgonzola cheese dates back to the year 879!",
+      "bilgi_tr": "Gorgonzola peynirinin tarihi 879 yılına kadar uzanır!",
+      "kategori": "trivia"
+    },
+    {
+      "id": 4,
+      "bilgi_en": "In the United States, lettuce is the second most popular fresh vegetable.",
+      "bilgi_tr": "Amerika Birleşik Devletleri'nde marul, en popüler ikinci taze sebzedir.",
+      "kategori": "trivia"
+    },
+    {
+      "id": 5,
+      "bilgi_en": "There's an enzyme in pineapple called bromelain that helps to break down proteins and can also ruin your tastebuds.",
+      "bilgi_tr": "Ananasta, proteinlerin parçalanmasına yardımcı olan ve aynı zamanda tat tomurcuklarınızı bozabilen 'bromelain' adında bir enzim bulunur.",
+      "kategori": "trivia"
+    },
+    {
+      "id": 6,
+      "bilgi_en": "The most popular carrots used to be purple.",
+      "bilgi_tr": "En popüler havuçlar eskiden mordu.",
+      "kategori": "trivia"
+    },
+    {
+      "id": 7,
+      "bilgi_en": "In the Philippines, it is considered good luck if a coconut is cleanly split open without jagged edges.",
+      "bilgi_tr": "Filipinler'de, bir hindistan cevizinin ortadan ikiye bölünce kenarları tırtıklı olmadan temiz ayrılması iyi şans olarak kabul edilir.",
+      "kategori": "trivia"
+    },
+    {
+      "id": 8,
+      "bilgi_en": "Peaches are the third most popular fruit grown in America.",
+      "bilgi_tr": "Şeftali, Amerika'da yetiştirilen en popüler üçüncü meyvedir.",
+      "kategori": "trivia"
+    },
+    {
+      "id": 9,
+      "bilgi_en": "Apples float in water, because 25% of their volume is made of air.",
+      "bilgi_tr": "Elmalar suda yüzer, çünkü hacimlerinin %25'i havadan oluşur.",
+      "kategori": "trivia"
+    },
+    {
+      "id": 10,
+      "bilgi_en": "Lettuce is a member of the sunflower family.",
+      "bilgi_tr": "Marul, ayçiçeği ailesinin bir üyesidir.",
+      "kategori": "trivia"
+    },
+    {
+      "id": 11,
+      "bilgi_en": "Eating pasta that has been cooked, cooled, and then reheated is significantly healthier than eating it freshly cooked because it turns into “resistant starch,” reducing blood glucose levels by half.",
+      "bilgi_tr": "Pişirilmiş, soğutulmuş ve ardından tekrar ısıtılmış makarna yemek; taze pişmiş makarna yemekten çok daha sağlıklıdır çünkü 'dirençli nişasta'ya dönüşerek kan şekeri seviyelerini yarı yarıya düşürür.",
+      "kategori": "trivia"
+    },
+    {
+      "id": 12,
+      "bilgi_en": "The most expensive fruit in the world is the Japanese Yubari cantaloupe, and two melons once sold at auction for $23,500.",
+      "bilgi_tr": "Dünyanın en pahalı meyvesi Japon Yubari kavunudur ve bir keresinde açık artırmada iki kavun 23.500 dolara satılmıştır.",
+      "kategori": "trivia"
+    },
+    {
+      "id": 13,
+      "bilgi_en": "Biting a wooden spoon whilst chopping an onion will stop your eyes from watering.",
+      "bilgi_tr": "Soğan doğrarken tahta bir kaşık ısırmak gözlerinizin sulanmasını engelleyecektir.",
+      "kategori": "trivia"
+    }
+  ]
+}
