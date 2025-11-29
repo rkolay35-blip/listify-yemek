@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listify Menü Simülatörü</title>
+    <style>
+        :root {
+            --primary: #ff6b6b; /* İştah açıcı kırmızı/turuncu */
+            --dark: #2d3436;
+            --light: #f9f9f9;
+            --gray: #dfe6e9;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+            color: var(--dark);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        h1 { text-align: center; color: var(--primary); margin-bottom: 10px; }
+        p.subtitle { text-align: center; color: #636e72; margin-bottom: 30px; }
+        
+        /* Dosya Yükleme Alanı */
+        .upload-box {
+            border: 3px dashed #b2bec3;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-color: #fafafa;
+        }
+        .upload-box:hover { 
+            border-color: var(--primary); 
+            background: #fff5f5; 
+            transform: scale(1.01);
+        }
+        .upload-icon { font-size: 40px; margin-bottom: 10px; display: block; }
+        
+        /* Navigasyon (Günler) */
+        .days-nav {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            scrollbar-width: thin;
+        }
+        .day-btn {
+            background: var(--light);
+            border: 1px solid var(--gray);
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            white-space: nowrap;
+            font-weight: 600;
+            color: #636e72;
+            transition: all 0.2s;
+        }
+        .day-btn:hover { background: #e2e6ea; }
+        .day-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
+        }
+
+        /* Versiyon Seçici (V1 / V2) */
+        .version-switch {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            background: #eee;
+            padding: 5px;
+            border-radius: 30px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .v-btn {
+            padding: 8px 25px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            background: transparent;
+            font-weight: 600;
+            color: #636e72;
+        }
+        .v-btn.active { 
+            background: white; 
+            color: var(--dark); 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+        }
+
+        /* Yemek Kartları Izgarası */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        /* Yemek Kartı Tasarımı */
+        .food-card {
+            border: 1px solid var(--gray);
+            border-radius: 12px;
+            overflow: hidden;
+            background: white;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .food-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+        }
+        
+        .food-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #eee;
+            display: block;
+        }
+        .food-content { padding: 20px; }
+        
+        .badges { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .food-tag {
+            background: var(--primary);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .youtube-btn {
+            text-decoration: none;
+            color: #c4302b;
+            font-size: 13px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: #fff0f0;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+        .youtube-btn:hover { background: #ffe0e0; }
+
+        .food-title { margin: 0 0 10px; font-size: 18px; line-height: 1.3; }
+        .food-meta { 
+            font-size: 13px; 
+            color: #666; 
+            margin-bottom: 15px; 
+            display: flex; 
+            align-items: center; 
+            gap: 5px; 
+        }
+        
+        /* Detay Kutuları */
+        .details-box {
+            background: #f8f9fa;
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            border: 1px solid #eee;
+        }
+        .details-box h4 { margin: 0 0 8px; color: #2d3436; font-size: 14px; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+        ul, ol { margin: 0; padding-left: 20px; color: #555; }
+        li { margin-bottom: 6px; line-height: 1.4; }
+
+        /* Hata Mesajı */
+        .error { color: red; text-align: center; display: none; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🥣 Listify Menü Simülatörü</h1>
+    <p class="subtitle">Hazırladığın JSON dosyasını test et, tarifleri ve resimleri kontrol et.</p>
+
+    <div class="upload-box" onclick="document.getElementById('fileInput').click()">
+        <span class="upload-icon">📂</span>
+        <h3 id="uploadText">JSON dosyasını buraya sürükle veya tıkla</h3>
+        <p style="color:#888; font-size:14px;">(final_pro_menu_v5.json önerilir)</p>
+        <input type="file" id="fileInput" accept=".json" style="display: none" onchange="dosyaYukle(this)">
+    </div>
+    <div id="errorMsg" class="error"></div>
+
+    <div id="appInterface" style="display: none;">
+        
+        <div class="days-nav" id="daysContainer">
+            </div>
+
+        <div class="version-switch">
+            <button class="v-btn active" onclick="setVersion(0)">Seçenek 1 (V1)</button>
+            <button class="v-btn" onclick="setVersion(1)">Seçenek 2 (V2)</button>
+        </div>
+
+        <h2 id="menuTitle" style="text-align: center; margin-bottom: 25px; color: #2d3436;"></h2>
+
+        <div class="menu-grid" id="menuContainer">
+            </div>
+    </div>
+</div>
+
+<script>
+    let globalData = null;
+    let activeDayIndex = 0;
+    let activeVersionIndex = 0;
+
+    // Resim yüklenemezse çalışacak fonksiyon (Sonsuz döngüyü engeller)
+    function imgError(image) {
+        image.onerror = null; // Döngüyü kır
+        // Gri bir placeholder göster
+        image.src = "https://placehold.co/600x400/e0e0e0/333333?text=Resim+Bulunamadi";
+        return true;
+    }
+
+    // Dosya Yükleme İşlemi
+    function dosyaYukle(input) {
+        const file = input.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            try {
+                globalData = JSON.parse(e.target.result);
+                
+                // Basit bir doğrulama: 'gunler' dizisi var mı?
+                if (!globalData.gunler) throw new Error("JSON formatı hatalı: 'gunler' dizisi bulunamadı.");
+
+                document.getElementById('uploadText').innerHTML = "✅ <b>" + file.name + "</b> başarıyla yüklendi!";
+                document.querySelector('.upload-box').style.borderColor = "#2ecc71";
+                document.querySelector('.upload-box').style.backgroundColor = "#e8f8f5";
+                
+                // Arayüzü aç
+                document.getElementById('appInterface').style.display = 'block';
+                document.getElementById('errorMsg').style.display = 'none';
+                
+                initApp();
+            } catch (error) {
+                const errDiv = document.getElementById('errorMsg');
+                errDiv.innerText = "HATA: " + error.message;
+                errDiv.style.display = 'block';
+            }
+        };
+        reader.readAsText(file);
+    }
+
+    // Uygulamayı Başlat
+    function initApp() {
+        renderDays();
+        renderMenu();
+    }
+
+    // Gün Butonlarını Oluştur
+    function renderDays() {
+        const container = document.getElementById('daysContainer');
+        container.innerHTML = '';
+        
+        globalData.gunler.forEach((gun, index) => {
+            const btn = document.createElement('button');
+            btn.className = `day-btn ${index === activeDayIndex ? 'active' : ''}`;
+            btn.innerText = gun.gun_adi;
+            btn.onclick = () => {
+                activeDayIndex = index;
+                renderDays(); // Aktif sınıfını güncellemek için tekrar çiz
+                renderMenu();
+            };
+            container.appendChild(btn);
+        });
+    }
+
+    // Versiyon Değiştirme (V1/V2)
+    function setVersion(vIndex) {
+        activeVersionIndex = vIndex;
+        
+        // Buton stillerini güncelle
+        const btns = document.querySelectorAll('.v-btn');
+        btns.forEach((btn, idx) => {
+            btn.className = `v-btn ${idx === vIndex ? 'active' : ''}`;
+        });
+        
+        renderMenu();
+    }
+
+    // Menüyü Ekrana Bas
+    function renderMenu() {
+        const container = document.getElementById('menuContainer');
+        const titleEl = document.getElementById('menuTitle');
+        container.innerHTML = '';
+
+        const gunVerisi = globalData.gunler[activeDayIndex];
+        // Hata koruması: Eğer o güne ait versiyon yoksa ilkini al
+        const secilenMenu = gunVerisi.secenekler[activeVersionIndex] || gunVerisi.secenekler[0];
+
+        titleEl.innerText = secilenMenu.baslik;
+
+        secilenMenu.yemekler.forEach(yemek => {
+            const card = document.createElement('div');
+            card.className = 'food-card';
+
+            // Malzemeleri Listele
+            let malzemelerHtml = '';
+            if(yemek.malzemeler && yemek.malzemeler.length > 0) {
+                malzemelerHtml = `<ul>${yemek.malzemeler.map(m => `<li>${m}</li>`).join('')}</ul>`;
+            } else {
+                malzemelerHtml = '<p style="color:#999; font-style:italic;">Malzeme bilgisi yok.</p>';
+            }
+
+            // Tarifi Listele (Dizi mi, Metin mi kontrol et)
+            let tarifHtml = '';
+            if (Array.isArray(yemek.tarif_adimlari)) {
+                tarifHtml = `<ol>${yemek.tarif_adimlari.map(step => `<li>${step}</li>`).join('')}</ol>`;
+            } else {
+                tarifHtml = `<p>${yemek.tarif || 'Tarif detayı bulunamadı.'}</p>`;
+            }
+
+            // Video Linki Varsa Göster
+            let videoHtml = '';
+            if (yemek.youtube_video) {
+                videoHtml = `
+                    <a href="${yemek.youtube_video}" target="_blank" class="youtube-btn">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                        İzle
+                    </a>`;
+            }
+
+            // Kart HTML Yapısı
+            card.innerHTML = `
+                <img src="${yemek.resim}" class="food-img" onerror="imgError(this)" alt="${yemek.isim}">
+                <div class="food-content">
+                    <div class="badges">
+                        <span class="food-tag">${yemek.tur}</span>
+                        ${videoHtml}
+                    </div>
+                    
+                    <h3 class="food-title">${yemek.isim}</h3>
+                    
+                    <div class="food-meta">
+                        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                        <span>${yemek.sure}</span>
+                    </div>
+                    
+                    <div class="details-box">
+                        <h4>🛒 Malzemeler</h4>
+                        ${malzemelerHtml}
+                    </div>
+
+                    <div class="details-box" style="background: #fff;">
+                        <h4>👨‍🍳 Yapılışı</h4>
+                        ${tarifHtml}
+                    </div>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+    }
+</script>
+
+</body>
+</html>
