@@ -7,12 +7,14 @@ app.use(cors());
 // --- VERİ DOSYALARI ---
 const haftalikMenuData = require('./data/endogru_haftalik_menuler.json');
 const yemeklerData = require('./data/endogru_tarifler.json');
-// Trivia bilgileri (Eğer dosya yoksa hata vermemesi için try-catch bloğuna alabilirsin veya direkt require yapabilirsin)
+
+// Trivia bilgileri
 let triviaData = [];
 try {
     triviaData = require('./data/trivia_bilgileri.json');
 } catch (e) {
-    console.log("Trivia dosyası bulunamadı veya hatalı.");
+    console.log("Trivia dosyası okunamadı:", e.message);
+    triviaData = {}; 
 }
 
 const PORT = process.env.PORT || 3000;
@@ -25,71 +27,44 @@ app.get('/', (req, res) => {
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Listify API v5.4</title>
+            <title>Listify API v5.6</title>
             <style>
                 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f4f4f9; color: #333; }
                 h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-                h2 { color: #e67e22; margin-top: 30px; }
                 .endpoint { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }
                 .method { display: inline-block; background: #27ae60; color: #fff; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 0.9em; margin-right: 10px; }
                 .url { font-family: monospace; font-size: 1.1em; color: #d35400; }
-                .param-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-                .param-table th, .param-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-                .param-table th { background-color: #f2f2f2; }
                 code { background: #eee; padding: 2px 5px; border-radius: 3px; font-family: monospace; color: #c0392b; }
                 a { color: #2980b9; text-decoration: none; }
             </style>
         </head>
         <body>
-            <h1>🚀 Listify API v5.4 Dokümantasyonu</h1>
-
-            <!-- 1. Haftalık Menü -->
+            <h1>🚀 Listify API v5.6 Dokümantasyonu</h1>
+            
             <div class="endpoint">
                 <h2>1. Haftalık Menü</h2>
                 <span class="method">GET</span> <span class="url">/api/haftalik-menu</span>
-                <p>14 günlük döngüye göre haftalık menüyü getirir.</p>
-                <ul>
-                    <li><a href="/api/haftalik-menu?gun=1" target="_blank">?gun=1 (Örnek)</a></li>
-                </ul>
+                <p>Parametre: <code>?gun=1</code></p>
             </div>
 
-            <!-- 2. Yemekler -->
             <div class="endpoint">
-                <h2>2. Yemekler (Arama & Filtreleme)</h2>
+                <h2>2. Yemekler</h2>
                 <span class="method">GET</span> <span class="url">/api/yemekler</span>
-                <p>Yemek tariflerini listeler ve filtreler.</p>
-                <ul>
-                    <li><a href="/api/yemekler?hazirlama_suresi=30" target="_blank">?hazirlama_suresi=30</a></li>
-                    <li><a href="/api/yemekler?ulke=turk" target="_blank">?ulke=turk</a></li>
-                </ul>
+                <p>Parametreler: <code>?ulke=turk</code>, <code>?hazirlama_suresi=30</code></p>
             </div>
 
-            <!-- 3. Meta -->
             <div class="endpoint">
                 <h2>3. Meta Veriler</h2>
                 <span class="method">GET</span> <span class="url">/api/meta</span>
-                <p>Filtreleme seçenekleri için tüm kategorileri döner.</p>
             </div>
 
-            <!-- 4. Trivia (YENİ) -->
             <div class="endpoint">
                 <h2>4. Trivia / İlginç Bilgiler</h2>
                 <span class="method">GET</span> <span class="url">/api/trivia</span>
-                <p>Yükleme ekranları için rastgele bir ilginç bilgi döndürür.</p>
-                
-                <h3>Parametreler:</h3>
-                <table class="param-table">
-                    <tr><th>Parametre</th><th>Durum</th><th>Açıklama</th></tr>
-                    <tr><td><code>dil</code></td><td><span style="color:red; font-weight:bold;">ZORUNLU</span></td><td>İstenen dil kodu (örn: tr, en).</td></tr>
-                </table>
-
-                <h3>Örnekler:</h3>
-                <ul>
-                    <li><a href="/api/trivia?dil=tr" target="_blank">/api/trivia?dil=tr</a> (Rastgele Türkçe Bilgi)</li>
-                    <li><a href="/api/trivia?dil=en" target="_blank">/api/trivia?dil=en</a> (Rastgele İngilizce Bilgi)</li>
-                </ul>
+                <p>Zorunlu Parametre: <code>?dil=tr</code> veya <code>?dil=en</code></p>
+                <p><a href="/api/trivia?dil=tr" target="_blank">Örnek Türkçe İstek</a></p>
             </div>
-
+            
             <p style="text-align: center; color: #7f8c8d; margin-top: 40px;">Listify Backend © 2024</p>
         </body>
         </html>
@@ -198,40 +173,62 @@ app.get('/api/meta', (req, res) => {
     });
 });
 
-// --- 5. ENDPOINT: Trivia / İlginç Bilgiler (YENİ) ---
-// Kullanım: /api/trivia?dil=tr
-// Dil parametresi ZORUNLUDUR. Tek bir rastgele bilgi döner.
+// --- 5. ENDPOINT: Trivia (DÜZELTİLMİŞ & İÇ İÇE YAPI DESTEKLİ) ---
 app.get('/api/trivia', (req, res) => {
     const dil = req.query.dil;
 
-    // 1. Dil parametresi kontrolü
     if (!dil) {
-        return res.status(400).json({ 
-            hata: "Dil parametresi zorunludur.", 
-            ornek_kullanim: "/api/trivia?dil=tr" 
+        return res.status(400).json({ hata: "Dil parametresi zorunludur. (?dil=tr)" });
+    }
+
+    // --- AKILLI VERİ BULUCU (GÜNCELLENDİ) ---
+    // JSON yapısı: { "veriler": { "bilgiler": [...] } } ihtimaline karşı tarama yapar.
+    let tumBilgiler = null;
+
+    if (Array.isArray(triviaData)) {
+        // 1. Kök dizin direkt dizi ise
+        tumBilgiler = triviaData;
+    } else if (triviaData.veriler) {
+        // 2. "veriler" anahtarı varsa
+        if (Array.isArray(triviaData.veriler)) {
+            // "veriler" direkt bir dizi ise
+            tumBilgiler = triviaData.veriler;
+        } else if (triviaData.veriler.bilgiler && Array.isArray(triviaData.veriler.bilgiler)) {
+            // "veriler" içinde "bilgiler" dizisi varsa (Senin belirttiğin durum)
+            tumBilgiler = triviaData.veriler.bilgiler;
+        }
+    } else if (triviaData.bilgiler && Array.isArray(triviaData.bilgiler)) {
+        // 3. "bilgiler" anahtarı kök dizindeyse
+        tumBilgiler = triviaData.bilgiler;
+    }
+
+    // Hala bulamadıysak genel arama yap (Son çare)
+    if (!tumBilgiler && typeof triviaData === 'object' && triviaData !== null) {
+        const values = Object.values(triviaData);
+        const bulunanDizi = values.find(val => Array.isArray(val));
+        if (bulunanDizi) {
+            tumBilgiler = bulunanDizi;
+        }
+    }
+
+    // Eğer hala liste bulunamadıysa hata ver
+    if (!tumBilgiler || !Array.isArray(tumBilgiler)) {
+        return res.status(500).json({ 
+            hata: "Trivia veri yapısı 'veriler' veya 'bilgiler' içinde bulunamadı.",
+            sunucudaki_veri_keys: (typeof triviaData === 'object') ? Object.keys(triviaData) : "Veri yok"
         });
     }
 
-    // JSON yapısı { "bilgiler": [...] } veya direkt [...] olabilir.
-    // Garantiye almak için kontrol ediyoruz.
-    const tumBilgiler = triviaData.bilgiler ? triviaData.bilgiler : triviaData;
-
-    if (!Array.isArray(tumBilgiler)) {
-        return res.status(500).json({ hata: "Trivia veri yapısı sunucuda hatalı." });
-    }
-
-    // 2. Dile göre filtreleme (Büyük/Küçük harf duyarsız)
+    // Dile göre filtreleme
     const filtrelenmis = tumBilgiler.filter(item => 
         item.dil && item.dil.toLowerCase() === dil.toLowerCase()
     );
 
     if (filtrelenmis.length === 0) {
-        return res.status(404).json({ mesaj: `Bu dilde (${dil}) herhangi bir bilgi bulunamadı.` });
+        return res.status(404).json({ mesaj: `Bu dilde (${dil}) bilgi bulunamadı.` });
     }
 
-    // 3. Rastgele bir tane seçme
     const randomBilgi = filtrelenmis[Math.floor(Math.random() * filtrelenmis.length)];
-
     res.json(randomBilgi);
 });
 
