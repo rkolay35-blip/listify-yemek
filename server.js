@@ -20,6 +20,13 @@ app.get('/', (req, res) => {
             <li><a href="/api/haftalik-menu">/api/haftalik-menu</a> (Tüm Liste)</li>
             <li><a href="/api/haftalik-menu?gun=1">/api/haftalik-menu?gun=1</a> (Gün 1 - v1)</li>
             <li><a href="/api/yemekler?ana_kategori=Ana Yemekler">/api/yemekler?ana_kategori=...</a> (Filtreleme Örneği)</li>
+            <li>Ana Kategoriye Göre: /api/yemekler?ana_kategori=Ana Yemekler</li>
+            <li>Etikete Göre: /api/yemekler?etiketler=yöresel</li>
+            <li>Hazırlama Süresine Göre: /api/yemekler?hazirlama_suresi=30</li>
+            <li>ID'ye Göre: /api/yemekler?id=1</li>
+            <li>Kombinasyon (Çoklu Filtre): /api/yemekler?ana_kategori=Ana Yemekler&hazirlama_suresi=90</li>
+            <li>Yemek İsmine Göre (Arama Çubuğu için): /api/yemekler?yemek_adi=mantı (İçinde "mantı" geçenleri getirir)</li>
+
         </ul>
     `);
 });
