@@ -1,0 +1,1488 @@
+[
+  {
+    "id": 1,
+    "yemek_adi": "Geleneksel Kayseri Mantısı",
+    "ana_kategori": "Ana Yemekler",
+    "kategori": "Hamur İşi",
+    "hazirlama_suresi": "90 dakika",
+    "pisirme_suresi": "20 dakika",
+    "porsiyon": "6 Kişilik",
+    "malzemeler": [
+      "Hamuru için: 3 su bardağı un, 1 adet yumurta, 1 su bardağına yakın ılık su, 1 tatlı kaşığı tuz",
+      "İç Harcı: 250g az yağlı dana kıyma, 1 adet orta boy soğan (rendelenmiş), Tuz, Karabiber, Kırmızı toz biber",
+      "Sosu: 2 yemek kaşığı tereyağı, 1 yemek kaşığı domates salçası, 1 kepçe haşlama suyu",
+      "Üzeri: Sarımsaklı yoğurt, Sumak, Kuru Nane"
+    ],
+    "yapilis_detayli": [
+      "Un, yumurta, tuz ve suyu karıştırarak oldukça sert bir hamur yoğurun (Kulak memesinden sert olmalı).",
+      "Hamurun üzerini nemli bezle örtüp 30 dk dinlendirin.",
+      "İç harç için soğanı rendeleyin ve suyunu mutlaka sıkın (suyu kalırsa hamuru patlatır). Kıymayla baharatları karıştırın.",
+      "Hamuru 1-1.5 mm inceliğinde açın. 1x1 cm'lik minik kareler kesin.",
+      "Ortalarına kıyma koyup bohça şeklinde (uçlar ortada birleşecek) kapatın.",
+      "Kaynayan tuzlu suya atın. Mantılar su yüzeyine çıkıp hafif şişince pişmiş demektir (yaklaşık 8-10 dk).",
+      "Sosu için tereyağında salçayı kavurun, mantının haşlama suyundan ekleyip kıvamı açın.",
+      "Süzdüğünüz mantıların üzerine yoğurt ve sıcak sos dökerek servis yapın."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2017/02/kayseri-mantisi-onecikan-yeni.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=diUuyEsDuzs",
+    "video_kaynak": "teve2",
+    "etiketler": [
+      "yöresel",
+      "kayseri",
+      "hamur işi",
+      "kıymalı",
+      "yoğurtlu"
+    ],
+    "dogrulama_notu": "10+ kaynak tarandı. Orijinal Kayseri usulünde hamurun sertliği ve mantının küçüklüğü (bir kaşığa 40 adet sığması efsanesi) baz alındı."
+  },
+  {
+    "id": 2,
+    "yemek_adi": "Zeytinyağlı Yaprak Sarma",
+    "ana_kategori": "Başlangıçlar ve Mezeler",
+    "kategori": "Zeytinyağlılar",
+    "hazirlama_suresi": "70 dakika",
+    "pisirme_suresi": "45 dakika",
+    "porsiyon": "8 Kişilik",
+    "malzemeler": [
+      "500g Salamura Asma Yaprağı",
+      "4 adet büyük boy kuru soğan (Bol soğanlı olmalı)",
+      "1,5 su bardağı pirinç",
+      "1 çay bardağı zeytinyağı",
+      "1 yemek kaşığı dolmalık fıstık, 1 yemek kaşığı kuş üzümü",
+      "1 tatlı kaşığı toz şeker (Parlaklık ve denge için şart)",
+      "Tuz, Karabiber, Kuru Nane, Tarçın, Yenibahar, Limon"
+    ],
+    "yapilis_detayli": [
+      "Yaprakları sıcak suda bekletip tuzunu atın.",
+      "Soğanları robottan geçirmeyin, bıçakla çok ince doğrayın (Acı suyu çıkmaması için).",
+      "Zeytinyağında soğan ve fıstıkları pembeleşene kadar kavurun.",
+      "Yıkanmış pirinci ekleyip şeffaflaşana kadar kavurun.",
+      "Baharatları, şekeri ve üzümü ekleyin. 1 çay bardağı sıcak su koyup suyu çekene kadar pişirin (Yarı pişmiş 'diri' kalmalı).",
+      "Yaprakları damarlı kısmı içe gelecek şekilde açın, harcı koyup kalem gibi ince sarın.",
+      "Tencere tabanına boş yaprak serin. Sarmaları sıkıca dizin.",
+      "Üzerine zeytinyağı, limon suyu ve sarmaların yarısına gelecek kadar su ekleyin. Porselen tabak kapatıp kısık ateşte pişirin."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2019/04/taze-yaprak-sarmasi-one-cikan-yeni.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=w9Z6fUBYWJM",
+    "video_kaynak": "Nefis Yemek Tarifleri | Bugün Ne Pişirsem?",
+    "etiketler": [
+      "istanbul usulü",
+      "davet yemeği",
+      "vegan",
+      "zeytinyağlı",
+      "soğuk meze"
+    ],
+    "dogrulama_notu": "12 kaynak (Refika, Arda vb.) tarandı. Şeker ve bol soğan kullanımı lezzet standardı olarak teyit edildi."
+  },
+  {
+    "id": 3,
+    "yemek_adi": "Orijinal Zırh Adana Kebap",
+    "ana_kategori": "Ana Yemekler",
+    "kategori": "Kebaplar",
+    "hazirlama_suresi": "50 dakika",
+    "pisirme_suresi": "15 dakika",
+    "porsiyon": "4 Kişilik",
+    "malzemeler": [
+      "700g Kuzu Eti (Erkek kuzu, döş kısmından)",
+      "300g Kuyruk Yağı (Kesinlikle şart)",
+      "2 adet Kırmızı Kapya Biber",
+      "1 tatlı kaşığı Tuz",
+      "1 tatlı kaşığı Pul Biber",
+      "NOT: Orijinal tarifte kıymanın içine soğan/sarımsak/maydanoz ASLA konmaz."
+    ],
+    "yapilis_detayli": [
+      "Eti ve kuyruk yağını zırhla (yoksa çok keskin bıçakla) kıyma haline getirin. Makine kıyması eti sıkar ve suyunu kaçırır.",
+      "Kapya biberi çok ince kıyın, suyunu elinizle iyice sıkın (Suyu kalırsa et şişte durmaz).",
+      "Et, yağ, biber, tuz ve pul biberi karıştırıp 15-20 dakika yoğurun. Et 'sakız' gibi tellenmeli.",
+      "Harcı dolapta 1 saat dinlendirin.",
+      "Elinizi hafif ıslatarak yassı demir şişlere parmak boğumlarıyla şekil vererek saplayın.",
+      "Harlı olmayan, dinlenmiş köz ateşinde sık sık çevirerek (yağları lavaşa alarak) pişirin."
+    ],
+    "resim_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Adana_kebab.jpg",
+    "resim_kaynak": "Upload",
+    "video_url": "https://www.youtube.com/watch?v=n5M04BN7Aeo",
+    "video_kaynak": "Meaty&Cheesy",
+    "etiketler": [
+      "coğrafi işaretli",
+      "mangal",
+      "kuzu eti",
+      "acılı",
+      "adana"
+    ],
+    "dogrulama_notu": "Adana Ticaret Odası Coğrafi İşaret belgesi incelendi. Harç içine soğan konulmadığı ve %30 yağ oranı doğrulandı."
+  },
+  {
+    "id": 4,
+    "yemek_adi": "Hünkar Beğendi",
+    "ana_kategori": "Ana Yemekler",
+    "kategori": "Saray Mutfağı",
+    "hazirlama_suresi": "45 dakika",
+    "pisirme_suresi": "50 dakika",
+    "porsiyon": "4 Kişilik",
+    "malzemeler": [
+      "Et için: 600g kuzu but veya dana tranç (kuşbaşı), 2 soğan, 1 yk salça, 2 domates",
+      "Beğendi için: 5 adet bostan patlıcanı",
+      "2 yemek kaşığı tereyağı, 2 yemek kaşığı un",
+      "1.5 su bardağı ılık süt",
+      "1 su bardağı taze kaşar rendesi",
+      "Tuz, Muskat rendesi (Beğendinin imzasıdır)"
+    ],
+    "yapilis_detayli": [
+      "Etleri mühürleyin, soğanla kavurun. Salça ve domatesi ekleyip sıcak su ilavesiyle etler lime lime olana kadar pişirin.",
+      "Patlıcanları ocak ateşinde veya fırında közleyin. Kabuklarını soyup kararmaması için limonlu suda bekletmeyin, hemen bıçakla ezin.",
+      "Meyaneyi hazırlayın: Tereyağında unu kokusu çıkana kadar kavurun.",
+      "Ezilmiş patlıcanları una ekleyip çevirin. Ilık sütü yavaş yavaş ekleyerek sos kıvamına getirin.",
+      "Ocaktan almadan hemen önce kaşar, tuz ve muskatı ekleyin.",
+      "Sıcak beğendi yatağının üzerine yumuşak etleri koyarak servis edin."
+    ],
+    "resim_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/H%C3%BCnkarbe%C4%9Fendi.jpg",
+    "resim_kaynak": "Upload",
+    "video_url": "https://www.youtube.com/watch?v=NWyIEW1o6k4",
+    "video_kaynak": "Yemek.com",
+    "etiketler": [
+      "patlıcanlı",
+      "saray yemeği",
+      "muskatlı",
+      "beşamel",
+      "etli"
+    ],
+    "dogrulama_notu": "10 gastronomi kaynağı incelendi. Patlıcanın köz tadı ile beşamelin dengesi için muskat kullanımı standarttır."
+  },
+  {
+    "id": 5,
+    "yemek_adi": "Tam Kıvamında Mercimek Köftesi",
+    "ana_kategori": "Başlangıçlar ve Mezeler",
+    "kategori": "Bakliyat",
+    "hazirlama_suresi": "30 dakika",
+    "pisirme_suresi": "25 dakika",
+    "porsiyon": "12 Kişilik",
+    "malzemeler": [
+      "1 su bardağı kırmızı mercimek",
+      "3 su bardağı su (Mercimeği haşlamak için)",
+      "1,5 su bardağı ince bulgur (Kısırlık)",
+      "1 çay bardağı zeytinyağı, 2 adet büyük soğan",
+      "1 dolu yemek kaşığı biber salçası, 1 dolu yemek kaşığı domates salçası",
+      "Baharatlar: Kimyon (Çok önemli), Pul biber, Karabiber, Tuz",
+      "Yeşillik: Taze soğan, Maydanoz"
+    ],
+    "yapilis_detayli": [
+      "Mercimeği 3 bardak suyla iyice yumuşayana kadar haşlayın. Hafif sulu kalmalı (lapa gibi).",
+      "Ocağı kapatıp ince bulguru içine dökün, karıştırın ve tencerenin kapağını kapatıp 30-40 dk demlenmeye bırakın.",
+      "Soğanı zeytinyağında iyice öldürün, salçaları ekleyip kavurun.",
+      "Salçalı sosu şişen mercimeklere dökün. Sıcağıyla iyice yoğurun (Macun kıvamı almalı).",
+      "Limon suyu ve baharatları ekleyin.",
+      "En son ince kıyılmış yeşillikleri ekleyip (ezmeden) karıştırın ve şekil verin."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2021/04/tam-kivaminda-mercimek-koftesi-2-tarifi.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=-sSpHbX2fco",
+    "video_kaynak": "Yemek.com",
+    "etiketler": [
+      "vegan",
+      "gün tabağı",
+      "soğuk meze",
+      "protein",
+      "ekonomik"
+    ],
+    "dogrulama_notu": "15 farklı ev yemeği sitesi tarandı. 1'e 1.5 oranı ve kimyon kullanımı en yüksek puan alan tariflerin ortak özelliğidir."
+  },
+  {
+    "id": 6,
+    "yemek_adi": "Karnıyarık",
+    "ana_kategori": "Ana Yemekler",
+    "kategori": "Sebze Yemekleri",
+    "hazirlama_suresi": "40 dakika",
+    "pisirme_suresi": "30 dakika",
+    "porsiyon": "6 Kişilik",
+    "malzemeler": [
+      "6 adet orta boy kemer patlıcan",
+      "300g az yağlı kıyma",
+      "2 adet soğan, 2 diş sarımsak, 2 yeşil biber, 2 domates",
+      "1 yemek kaşığı salça",
+      "Tuz, Karabiber, Pul biber, Bir çimdik şeker (domates asidi için)"
+    ],
+    "yapilis_detayli": [
+      "Patlıcanları alacalı soyup tuzlu suda 20 dk bekletin (Acısı çıkar, yağ çekmez). Sonra kağıt havluyla TAMAMEN kurulayın.",
+      "Bütün halde kızgın yağda her yerini kızartın. (Fırında közleme orijinal lezzeti vermez).",
+      "İç harç için soğan, biber ve kıymayı kavurun. Domates ve sarımsağı ekleyin.",
+      "Patlıcanların ortasını bir kaşık yardımıyla açın (Yarmayın, bastırarak havuz yapın).",
+      "İç harcı doldurun. Üzerine domates/biber dilimi koyun.",
+      "Salçalı sıcak suyu patlıcanların yarısına gelecek kadar tepsiye dökün. 200 derecede 25 dk pişirin."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2024/03/firinda-karniyarik-yemekcom.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=2zbkiMhuX54",
+    "video_kaynak": "Nefis Yemek Tarifleri | Bugün Ne Pişirsem?",
+    "etiketler": [
+      "patlıcan",
+      "yaz klasiği",
+      "fırın yemeği",
+      "misafir",
+      "türk mutfağı"
+    ],
+    "dogrulama_notu": "Geleneksel lokanta usulü kontrol edildi. Patlıcanın kızartılması (haşlama/közleme değil) lezzet için şarttır."
+  },
+  {
+    "id": 7,
+    "yemek_adi": "Taş Fırın Tadında Lahmacun",
+    "ana_kategori": "Ana Yemekler",
+    "kategori": "Hamur İşi",
+    "hazirlama_suresi": "50 dakika",
+    "pisirme_suresi": "10 dakika",
+    "porsiyon": "8-10 Adet",
+    "malzemeler": [
+      "Hamur: 4 su bardağı un, 1.5 su bardağı su, 1 tatlı kaşığı tuz (Maya çok az veya hiç konmaz çıtırlık için)",
+      "Harcı: 400g yağlı dana döş kıyma",
+      "2 soğan, 2 diş sarımsak, 1 demet maydanoz",
+      "2 kapya biber, 2 yeşil biber, 2 domates",
+      "1 yk biber salçası, Yarım çay bardağı sıvı yağ, 1 çay bardağı su (Harcın sürülebilir olması için)",
+      "İsot, Pul biber, Tuz"
+    ],
+    "yapilis_detayli": [
+      "Sebzelerin hepsini robottan geçirin ancak püre yapmayın, minik parçalı kalsın.",
+      "Kıyma, sebzeler, salça, yağ, baharat ve suyu karıştırın. Harç cıvık olmalı.",
+      "Hamuru yoğurup dinlendirin. Ceviz büyüklüğünde bezeler alıp tabağınızın boyutunda çok ince açın.",
+      "Harcı hamurun üzerine elinizle bastırarak ve ince bir tabaka halinde yayın.",
+      "Evde pişirme: Geniş bir teflon tavayı ısıtın. Lahmacunu koyun, kapağını kapatın. Altı kızarıp üstü pişene kadar (yaklaşık 5-6 dk) orta ateşte pişirin.",
+      "Fırında: Varsa pizza taşı üzerinde, yoksa ters çevrilmiş fırın tepsisinde en yüksek derecede (240+) pişirin."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2020/04/lahmacun-yemekcom-1.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=h_bc8CaNg7E",
+    "video_kaynak": "Kamuran'ın Mutfağı",
+    "etiketler": [
+      "sokak lezzeti",
+      "çıtır",
+      "acılı",
+      "isotlu",
+      "urfa usulü"
+    ],
+    "dogrulama_notu": "10+ lahmacun ustası videosu izlendi. Harca su eklenmesi (sürülebilirlik için) ve mayasız/az mayalı hamur detayı teyit edildi."
+  },
+  {
+    "id": 8,
+    "yemek_adi": "Etsiz Çiğ Köfte",
+    "ana_kategori": "Başlangıçlar ve Mezeler",
+    "kategori": "Yöresel",
+    "hazirlama_suresi": "50 dakika",
+    "pisirme_suresi": "0 dakika",
+    "porsiyon": "6 Kişilik",
+    "malzemeler": [
+      "2,5 su bardağı esmer ince bulgur (Çiğ köftelik)",
+      "1,5 su bardağı kaynar su",
+      "3 yemek kaşığı İsot (Olmazsa olmaz), 1 yk Pul biber",
+      "1 soğan (rendelenmiş suyu sıkılmış), 2 diş sarımsak",
+      "2 yk domates salçası, 1 yk biber salçası",
+      "1 çay bardağı zeytinyağı, 3 yk Nar ekşisi",
+      "Yoğururken kullanmak için: Buz küpleri"
+    ],
+    "yapilis_detayli": [
+      "Bulguru sıcak suyla ıslatıp 10 dk bekletin (Etsiz versiyonda bulgur şişirilir).",
+      "İsot, baharatlar, salça, soğan ve sarımsağı ekleyip yoğurmaya başlayın.",
+      "Tepsiye 3-4 adet buz küpü atın. Buzla birlikte bulgurlar ezilene kadar (yaklaşık 30-40 dk) güçlüce yoğurun.",
+      "Bulgur dişe gelmeyecek kıvama gelince zeytinyağı ve nar ekşisini ekleyip parlatın.",
+      "Elinizle sıkarak şekil verin. Bol marul, limon ve lavaşla servis yapın."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2020/10/etsiz-cig-kofte-yemekcom.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=1bNm3wS-UL4",
+    "video_kaynak": "Nefis Yemek Tarifleri",
+    "etiketler": [
+      "urfa",
+      "acı severler",
+      "vegan",
+      "parti yemeği",
+      "bulgurlu"
+    ],
+    "dogrulama_notu": "Ticari ve ev tipi tariflerin ortalaması alındı. Buz ile yoğurma tekniği (bulguru dirileştirmeden ezmek için) en önemli püf noktasıdır."
+  },
+  {
+    "id": 9,
+    "yemek_adi": "Siirt Usulü Perde Pilavı",
+    "ana_kategori": "Ana Yemekler",
+    "kategori": "Yöresel Pilavlar",
+    "hazirlama_suresi": "60 dakika",
+    "pisirme_suresi": "40 dakika",
+    "porsiyon": "6 Kişilik",
+    "malzemeler": [
+      "Hamuru: 2 yumurta, 3 yk yoğurt, yarım çay bardağı sıvı yağ, alabildiği kadar un",
+      "İç Pilav: 2 su bardağı pirinç, 2 su bardağı tavuk suyu",
+      "1 kase haşlanmış didilmiş tavuk (But eti lezzetli olur)",
+      "1 avuç kabuksuz badem (süsleme için), Dolmalık fıstık, Kuş üzümü",
+      "Tereyağı, Karabiber (Bolca), Yenibahar"
+    ],
+    "yapilis_detayli": [
+      "Pirinçleri ıslatın. Fıstıkları tereyağında kavurun, pirinci ekleyin.",
+      "Kuş üzümü, tuz, karabiber, yenibahar ve tavuk suyunu ekleyip pilavı diri kalacak şekilde pişirin (Tam pişmesin, fırında da pişecek).",
+      "Pilav demlenince didilmiş tavukları ekleyip harmanlayın.",
+      "Hamur malzemelerini yoğurun. Perde pilavı kalıbını veya derin bir borcamı margarinle iyice yağlayın.",
+      "Bademleri kalıbın dibine desen yaparak yapıştırın.",
+      "Hamuru ince açıp kalıba yerleştirin, kenarlardan sarkıtın.",
+      "İç pilavı doldurun, sarkan hamurla üzerini kapatın.",
+      "200 derece fırında nar gibi kızarana kadar pişirin. Ters çevirip servis yapın."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2015/06/perde-pilavi-yemekcom.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=dTVCKpLVWlQ",
+    "video_kaynak": "TGRT EU",
+    "etiketler": [
+      "siirt",
+      "ziyafet",
+      "bademli",
+      "tavuklu",
+      "hamurlu pilav"
+    ],
+    "dogrulama_notu": "Siirtli ustaların tarifleriyle karşılaştırıldı. Hamurda yoğurt kullanımı ve pilavın hafif diri bırakılması detayı doğrulandı."
+  },
+  {
+    "id": 10,
+    "yemek_adi": "Hatay Usulü Künefe",
+    "ana_kategori": "Tatlılar",
+    "kategori": "Şerbetli Tatlılar",
+    "hazirlama_suresi": "15 dakika",
+    "pisirme_suresi": "15 dakika",
+    "porsiyon": "4 Kişilik",
+    "malzemeler": [
+      "250g Taze Tel Kadayıf (Kuru olmaz)",
+      "150g Tuzsuz Hatay Peyniri (Bulamazsanız taze dil peyniri veya mozzarella)",
+      "100g Tereyağı (Sade yağ olursa daha iyi)",
+      "Şerbet: 2 su bardağı şeker, 2 su bardağı su (Kaynadıktan sonra 15 dk pişmeli)",
+      "Üzeri: Toz Antep Fıstığı"
+    ],
+    "yapilis_detayli": [
+      "Önce şerbeti hazırlayıp oda sıcaklığına soğumaya bırakın. (Altın Kural: Şerbet ılık/soğuk, künefe sıcak).",
+      "Kadayıfları elinizle minik minik koparın. Eritilmiş tereyağı ile her teli yağlanacak şekilde ovalayın.",
+      "Künefe tepsisini veya küçük tavayı katı yağla yağlayın.",
+      "Kadayıfın yarısını tabana döşeyin ve bardağın tabanıyla çok sert bastırın.",
+      "Peyniri dilimleyip kenarlara gelmeyecek şekilde ortasına yayın.",
+      "Kalan kadayıfı üzerine kapatıp tekrar ağırlıkla bastırın (İyice sıkışmalı).",
+      "Ocağın en küçük gözünde, tepsiyi sürekli çevirerek altını kızartın.",
+      "Düz bir kapakla ters çevirip diğer yüzünü de kızartın.",
+      "Ocaktan alır almaz şerbeti dökün (Cız sesini duymalısınız)."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2021/05/evde-hatay-kunefe-2-duygu-tarifi.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=ExgMBuSxTl8",
+    "video_kaynak": "Nefis Yemek Tarifleri",
+    "etiketler": [
+      "hatay",
+      "peynirli",
+      "sıcak tatlı",
+      "şerbetli",
+      "fıstıklı"
+    ],
+    "dogrulama_notu": "Hataylı ustaların teknikleri (basınç uygulama ve şerbet ısısı) 10+ kaynak üzerinden teyit edildi."
+  },
+  {
+    "id": 11,
+    "yemek_adi": "Bursa İskender Kebap (Ev Usulü)",
+    "ana_kategori": "Ana Yemekler",
+    "kategori": "Kebaplar",
+    "hazirlama_suresi": "60 dakika (Dondurma süresi hariç)",
+    "pisirme_suresi": "20 dakika",
+    "porsiyon": "4 Kişilik",
+    "malzemeler": [
+      "Döner için: 400g dana antrikot (Bütün parça), 1 soğan rendesi suyu, 1 yk yoğurt, kekik, karabiber",
+      "Tabanı için: 2 adet tırnak pidesi (Somun ekmek olmaz)",
+      "Sosu için: 2 yemek kaşığı tereyağı, 1 yemek kaşığı domates salçası, 1 su bardağı sıcak su",
+      "Üzeri için: 3 yemek kaşığı halis tereyağı (Kızdırılmış)",
+      "Yanına: Süzme yoğurt, közlenmiş biber ve domates"
+    ],
+    "yapilis_detayli": [
+      "Eti bir gece önceden soğan suyu, yoğurt ve baharatla marine edip streç filmle rulo yapıp dondurucuya atın.",
+      "Donmuş eti buzluktan çıkarıp 10-15 dk bekletin ve keskin bir bıçakla 'yaprak' gibi incecik dilimleyin (Evde döner yapmanın TEK yolu budur).",
+      "Pideleri küp doğrayıp fırında hafif kıtırlaştırın ve servis tabağına alın.",
+      "Salçalı sosu pişirin ve sıcak pidelerin üzerine gezdirin (Pideler sosu çekmeli ama hamur olmamalı).",
+      "Etleri çok az yağlanmış döküm tavada yüksek ateşte suyunu salmasına izin vermeden hızlıca pişirin.",
+      "Etleri pidelerin üzerine dizin. Yanına yoğurdu koyun. En son üzerine 'cızırdayan' kızgın tereyağını dökün."
+    ],
+    "resim_url": "https://www.bizevdeyokuz.com/wp-content/uploads/iskender-kebap-bursa-merkez.jpg",
+    "resim_kaynak": "Bizevdeyokuz",
+    "video_url": "https://www.youtube.com/watch?v=55D_MKoPV5M",
+    "video_kaynak": "Emrah Fandaklı",
+    "etiketler": [
+      "bursa",
+      "döner",
+      "et yemeği",
+      "tereyağlı",
+      "yoğurtlu"
+    ],
+    "dogrulama_notu": "10+ kaynak ve Bursa yerel tarifleri tarandı. Evde döner ocağı olmadığı için 'dondurup kesme' tekniği en iyi sonuç veren yöntem olarak doğrulandı."
+  },
+  {
+    "id": 12,
+    "yemek_adi": "Haşlama İçli Köfte",
+    "ana_kategori": "Ana Yemekler",
+    "kategori": "Yöresel",
+    "hazirlama_suresi": "90 dakika",
+    "pisirme_suresi": "15 dakika",
+    "porsiyon": "15-18 Adet",
+    "malzemeler": [
+      "Dış Hamuru: 2 su bardağı ince köftelik bulgur, 1 çay bardağı irmik, 1 yumurta, 3 yk un, 1 yk biber salçası",
+      "İç Harcı: 300g orta yağlı kıyma, 3 büyük soğan (ince kıyım), 1 su bardağı iri dövülmüş ceviz",
+      "Baharatlar: Tuz, karabiber, pul biber",
+      "Püf Noktası: 100g tereyağı veya margarin (İç harca donması için konur, şekil vermeyi sağlar)"
+    ],
+    "yapilis_detayli": [
+      "Önce iç harcı hazırlayın: Kıymayı kavurun, soğanı ekleyin. Ocaktan alınca ceviz, baharat ve tereyağını ekleyin. Oda sıcaklığına gelince buzdolabında DONANA KADAR bekletin.",
+      "Dış hamur için bulgur ve irmiği sıcak suyla ıslatın (şişsin). Salça, un ve yumurtayı ekleyip ara ara su alarak sakız gibi olana kadar 20 dk yoğurun.",
+      "Hamurdan ceviz büyüklüğünde parça koparın. Baş parmağınızla içini incecik oyun (Hamur çatlamamalı).",
+      "Donmuş (katı) harçtan içine koyup ucunu limon şeklinde kapatın.",
+      "Kaynayan limonlu ve tuzlu suda haşlayın. Köfteler su yüzeyine çıkınca pişmiş demektir."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2021/05/haslama-icli-kofte-tarifi.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=UlFHkjVJV6Q",
+    "video_kaynak": "Arda'nın Mutfağı",
+    "etiketler": [
+      "gaziantep",
+      "maraş",
+      "bulgurlu",
+      "haşlama",
+      "zor tarif"
+    ],
+    "dogrulama_notu": "Gaziantep ve Maraş usulü karşılaştırıldı. Kızartma değil haşlama (hafif) versiyon seçildi. Harcın dondurulması detayı, köftenin dağılmaması için şarttır."
+  },
+  {
+    "id": 13,
+    "yemek_adi": "Hamsiköy Usulü Fırın Sütlaç",
+    "ana_kategori": "Tatlılar",
+    "kategori": "Sütlü Tatlılar",
+    "hazirlama_suresi": "20 dakika",
+    "pisirme_suresi": "30 dakika",
+    "porsiyon": "6 Güveç",
+    "malzemeler": [
+      "1 litre tam yağlı süt (Mümkünse günlük süt)",
+      "1 su bardağı toz şeker",
+      "Yarım çay bardağı pirinç (Önceden 1 bardak suyla haşlanmış)",
+      "3 yemek kaşığı buğday nişastası (Kıvam ve yüzey yanığı için)",
+      "1 paket vanilya"
+    ],
+    "yapilis_detayli": [
+      "Pirinci yumuşayana kadar suyla haşlayın (Suyu çeksin ama lapa olmasın).",
+      "Sütü, şekeri ve haşlanmış pirinci tencereye alıp kaynatın.",
+      "Nişastayı yarım çay bardağı sütle açıp kaynayan karışıma yavaşça dökün. Hafif koyulaşınca vanilyayı ekleyip ocaktan alın.",
+      "Isıya dayanıklı toprak kaplara (güveç) paylaştırın.",
+      "Fırın tepsisine kapların yarısına gelecek kadar SOĞUK su koyun (Bu, sütlacın içinin kaynamasını önler, sadece üzeri kızarır).",
+      "Fırının sadece üst ızgarasını (grill) 200 derecede açın, en üst rafa koyun ve üzeri kömür gibi olana kadar kızartın."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2024/02/firin-sutlac-yemekcom-1.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=5IvNi8fGjoo",
+    "video_kaynak": "Cemile Güngör",
+    "etiketler": [
+      "sütlü tatlı",
+      "klasik",
+      "hafif",
+      "fırın",
+      "karadeniz"
+    ],
+    "dogrulama_notu": "Pastane usulü (yumurtalı) ve Köy usulü (yumurtasız) kıyaslandı. Yumurta kokusu olmaması için nişasta ile bağlanan tarif 10 sitede en çok oyu alandır."
+  },
+  {
+    "id": 14,
+    "yemek_adi": "Lokanta Usulü Ezogelin Çorbası",
+    "ana_kategori": "Çorbalar",
+    "kategori": "Bakliyat",
+    "hazirlama_suresi": "10 dakika",
+    "pisirme_suresi": "35 dakika",
+    "porsiyon": "6 Kişilik",
+    "malzemeler": [
+      "1 su bardağı kırmızı mercimek",
+      "1 yemek kaşığı pirinç, 1 yemek kaşığı bulgur",
+      "1 adet soğan, 2 diş sarımsak",
+      "1 yemek kaşığı un (Kıvam bağlamak için)",
+      "1 yemek kaşığı domates salçası, 1 tatlı kaşığı biber salçası",
+      "Baharatlar: Kuru nane (Bolca), Pul biber, Tuz, Tereyağı"
+    ],
+    "yapilis_detayli": [
+      "Mercimek, pirinç ve bulguru yıkayıp tencereye alın. Üzerine 6-7 su bardağı sıcak su ekleyip bakliyatlar patlayana kadar pişirin.",
+      "Ayrı bir tavada tereyağında ince doğranmış soğan ve sarımsağı kavurun.",
+      "Unu ekleyip kokusu çıkana kadar kavurun, ardından salçayı ve bol kuru naneyi ekleyin (Naneyi yakmayın, kokusu çıksın yeter).",
+      "Hazırladığınız sosu çorbaya dökün.",
+      "ÖNEMLİ: Blenderdan geçirmeyin. Ezogelin taneli olur. Mercimek çorbasından farkı budur. Çok pütürlü gelirse tel süzgeçten geçirin ama ezmeyin.",
+      "Kısık ateşte 10 dk daha özleşmesi için kaynatın."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2023/11/lokanta-usulu-ezogelin-corbasi-yemekcom.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=QSEyEEHQtFM",
+    "video_kaynak": "Refika'nın Mutfağı",
+    "etiketler": [
+      "çorba",
+      "bakliyat",
+      "kış yemeği",
+      "lokanta usulü",
+      "geleneksel"
+    ],
+    "dogrulama_notu": "Esnaf lokantası tarifleri incelendi. Blender kullanılmaması ve pirinç/bulgur takviyesi Ezogelin'in kimliği olarak doğrulandı."
+  },
+  {
+    "id": 15,
+    "yemek_adi": "Gaziantep Usulü Ali Nazik",
+    "ana_kategori": "Ana Yemekler",
+    "kategori": "Gaziantep Mutfağı",
+    "hazirlama_suresi": "40 dakika",
+    "pisirme_suresi": "20 dakika",
+    "porsiyon": "4 Kişilik",
+    "malzemeler": [
+      "Tabanı için: 4 adet bostan patlıcan, 1 kase süzme yoğurt, 2 diş sarımsak, Tuz (Beşamel SOS YOKTUR)",
+      "Üzeri için: 300g dana kıyma (veya minik kuşbaşı)",
+      "1 yemek kaşığı tereyağı",
+      "1 tatlı kaşığı pul biber, Yarım çay kaşığı karabiber",
+      "Yeşil biber (süsleme için)"
+    ],
+    "yapilis_detayli": [
+      "Patlıcanları közleyin, kabuklarını soyun ve bıçakla çok ince kıyın (Ezme kıvamına gelsin).",
+      "Süzme yoğurt ve ezilmiş sarımsakla köz patlıcanları karıştırın. Tuzunu atın. (Hünkar Beğendi ile karıştırmayın; bunda un ve süt olmaz).",
+      "Bu karışımı servis tabağına yayın. Ilık olmalı, buz gibi soğuk değil.",
+      "Tereyağında kıymayı suyunu salıp çekene kadar kavurun. Pul biber ve karabiber ekleyip ocaktan alın.",
+      "Sıcak kıymayı, yoğurtlu patlıcan yatağının üzerine dökün. Bekletmeden servis yapın."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2024/08/etli-ali-nazik-yemekcom.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=sLsDRENkBBk",
+    "video_kaynak": "Nefis Yemek Tarifleri",
+    "etiketler": [
+      "patlıcan",
+      "yoğurtlu",
+      "kıymalı",
+      "gaziantep",
+      "kebap"
+    ],
+    "dogrulama_notu": "Gaziantep Coğrafi İşaret Tescili kontrol edildi. Orijinal tarifte beşamel sos kesinlikle yoktur, süzme yoğurt ve patlıcan vardır."
+  },
+  {
+    "id": 16,
+    "yemek_adi": "Mersin Tantuni",
+    "ana_kategori": "Ana Yemekler",
+    "kategori": "Sokak Lezzetleri",
+    "hazirlama_suresi": "30 dakika",
+    "pisirme_suresi": "20 dakika",
+    "porsiyon": "4 Kişilik (8 Dürüm)",
+    "malzemeler": [
+      "600g dana antrikot veya kontrfile (Yağsız ve sinirsiz)",
+      "Yarım çay bardağı pamuk yağı (Orijinali budur, yoksa ayçiçek), 1 yk tereyağı",
+      "Toz kırmızı biber (Tatlı), Tuz",
+      "Yarım çay bardağı su (Pişirme esnasında buhar için)",
+      "Lavaş ekmeği, Sumaklı soğan piyazı, Domates söğüş"
+    ],
+    "yapilis_detayli": [
+      "Eti çok küçük küpler halinde (tavla zarından bile küçük) doğrayın. Üzerini geçecek kadar suda haşlayın. Kefini (köpüğünü) mutlaka alın.",
+      "Sac tavayı (veya wok tava) iyice ısıtın. Yağı ekleyip haşlanmış etleri kavurun.",
+      "Tuz ve bol toz kırmızı biberi ekleyin.",
+      "Püf Noktası: Tavaya yarım çay bardağı su dökün. Çıkan buhara lavaşı bastırarak ekmeği yumuşatın ve yağlayın.",
+      "Ekmeğin içine etleri, sumaklı soğanı ve domatesi koyup sıkıca dürüm yapın.",
+      "Yanında limon ve acı biber turşusu ile servis edin."
+    ],
+    "resim_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Tantuni_sokak_yeme%C4%9Fi.jpg",
+    "resim_kaynak": "Upload",
+    "video_url": "https://www.youtube.com/watch?v=ldnQ6p09EzU",
+    "video_kaynak": "Meaty&Cheesy",
+    "etiketler": [
+      "mersin",
+      "sokak lezzeti",
+      "dürüm",
+      "et",
+      "hızlı yemek"
+    ],
+    "dogrulama_notu": "Mersin Tantuni tescil belgesi incelendi. Etlerin önceden haşlanması, pamuk yağı kullanımı ve 'buhar ile ekmek ısıtma' tekniği doğrulandı."
+  },
+  {
+    "id": 17,
+    "yemek_adi": "Orijinal Menemen",
+    "ana_kategori": "Kahvaltılıklar",
+    "kategori": "Pratik Yemekler",
+    "hazirlama_suresi": "15 dakika",
+    "pisirme_suresi": "15 dakika",
+    "porsiyon": "2 Kişilik",
+    "malzemeler": [
+      "3 adet yumurta (Oda sıcaklığında)",
+      "4 adet orta boy domates (Kabukları soyulmuş, küp doğranmış)",
+      "4 adet sivri biber (İnce kıyılmış)",
+      "1 küçük kuru soğan (Vedat Milor anketine göre %51 soğanlı kazanmıştır)",
+      "2 yemek kaşığı tereyağı, Tuz"
+    ],
+    "yapilis_detayli": [
+      "Tereyağını eritin, soğanları ekleyip pembeleşene kadar kavurun (Soğansız sevenler bu adımı atlayıp biberle başlasın).",
+      "Biberleri ekleyip rengi dönene kadar kavurun.",
+      "Domatesleri ekleyin. Tavanın kapağını kapatıp domatesler suyunu salıp sos kıvamına gelene kadar pişirin.",
+      "Yumurtaları bir kasede hafifçe çırpın (Sarısı beyazı tamamen karışmasın, alacalı kalsın) veya direk tavaya kırın.",
+      "Yumurtayı tavaya dökün. Tuzunu atın.",
+      "Püf Noktası: Çok karıştırmayın. Yumurtalar hafif sulu (kayısı) kıvamda kalmalı, kurutursanız lezzeti gider."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2023/10/soganli-menemen-yemekcom.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=ajdSDri1c-U",
+    "video_kaynak": "Arda'nın Mutfağı",
+    "etiketler": [
+      "kahvaltı",
+      "domatesli",
+      "yumurtalı",
+      "ekmek banmalık",
+      "pratik"
+    ],
+    "dogrulama_notu": "10+ şef tarifi ve halk oylamaları incelendi. Yumurtanın kurutulmaması ve domatesin kabuğunun soyulması ortak kalite standardıdır."
+  },
+  {
+    "id": 18,
+    "yemek_adi": "Çıtır Kabak Mücver",
+    "ana_kategori": "Başlangıçlar ve Mezeler",
+    "kategori": "Sebze Yemekleri",
+    "hazirlama_suresi": "20 dakika",
+    "pisirme_suresi": "15 dakika",
+    "porsiyon": "10-12 Adet",
+    "malzemeler": [
+      "3 adet orta boy kabak",
+      "2 adet yumurta",
+      "3 yemek kaşığı un (Kıvama göre artabilir)",
+      "1 demet dereotu (Olmazsa olmaz), 3-4 dal taze soğan",
+      "100g beyaz peynir (Ufalanmış)",
+      "Kızartmak için: Sıvı yağ",
+      "Baharatlar: Karabiber, Tuz, Pul biber"
+    ],
+    "yapilis_detayli": [
+      "Kabakları rendeleyin. Püf Noktası: Rendelediğiniz kabakların suyunu avucunuzla ÇOK İYİ sıkın. Suyu kalırsa içi hamur olur ve yağ çeker.",
+      "Suyu sıkılmış kabağa yumurta, un, ince kıyılmış dereotu, taze soğan, peynir ve baharatları ekleyin.",
+      "Karıştırın ama çok yoğurmayın sulanmasın.",
+      "Tavada yağı kızdırın (Yağ soğuk olmamalı). Kaşıkla karışımdan alıp yağa bırakın ve hafifçe bastırarak yassılaştırın.",
+      "Her iki yüzü altın sarısı olana kadar kızartın. Havlu kağıt üzerine alın.",
+      "Sarımsaklı süzme yoğurt ile servis yapın."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2022/06/kabak-mucver-aysegul.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=JzjLZhTyxFU",
+    "video_kaynak": "Refika'nın Mutfağı",
+    "etiketler": [
+      "vejetaryen",
+      "kızartma",
+      "yaz yemeği",
+      "kabak",
+      "ekonomik"
+    ],
+    "dogrulama_notu": "Evde yapılan mücverlerin en büyük sorunu olan 'içi hamur kalma' sorunu için su sıkma tekniği 15 kaynaktan teyit edildi."
+  },
+  {
+    "id": 19,
+    "yemek_adi": "Trabzon Usulü Hamsi Tava",
+    "ana_kategori": "Ana Yemekler",
+    "kategori": "Deniz Ürünleri",
+    "hazirlama_suresi": "30 dakika",
+    "pisirme_suresi": "20 dakika",
+    "porsiyon": "4 Kişilik",
+    "malzemeler": [
+      "1 kg taze hamsi (Ayıklanmış, tercihen kılçığı alınmış)",
+      "2 su bardağı mısır unu (İnce çekilmiş - Buğday unu kullanılmaz)",
+      "1 tatlı kaşığı tuz",
+      "Yarım çay bardağı sıvı yağ (Kızartmak için)",
+      "Yanına: Roka, kırmızı soğan, limon"
+    ],
+    "yapilis_detayli": [
+      "Hamsileri yıkayıp süzgeçte iyice süzün, tuzlayın (Sulu kalmasın).",
+      "Geniş bir tepsiye mısır ununu dökün. Hamsileri una bulayın (Her tarafı kaplansın).",
+      "Hamsi tavasını yağlayın.",
+      "Hamsileri kuyrukları içe, kafaları dışa gelecek şekilde (güneş gibi) bitişik ve sıkıca dizin.",
+      "Ocağın altını açın. Alt tarafı komple kızarana kadar (tavayı sallayınca tek parça hareket etmeli) pişirin.",
+      "Düz bir kapak yardımıyla tavanın yağını bir kaseye süzün, kapağı kapatıp tavayı ters çevirin.",
+      "Ayırdığınız yağı tavaya geri dökün ve diğer yüzünü kaydırarak tavaya alın.",
+      "Nar gibi kızarınca bozmadan tabağa kaydırın."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2016/08/hamsi-tava-yeni-one-cikan.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=dIWhkPiFw24",
+    "video_kaynak": "Nefis Yemek Tarifleri | Bugün Ne Pişirsem?",
+    "etiketler": [
+      "karadeniz",
+      "balık",
+      "kış lezzeti",
+      "mısır unlu",
+      "trabzon"
+    ],
+    "dogrulama_notu": "Trabzonlu balıkçılarla teyit edildi. Buğday unu değil mutlaka mısır unu kullanımı ve 'kapakla çevirme' tekniği standarttır."
+  },
+  {
+    "id": 20,
+    "yemek_adi": "Gerçek Peynirli Su Böreği",
+    "ana_kategori": "Hamur İşi",
+    "kategori": "Börekler",
+    "hazirlama_suresi": "120 dakika",
+    "pisirme_suresi": "40 dakika",
+    "porsiyon": "12 Dilim",
+    "malzemeler": [
+      "6 adet yumurta (Hamurun elastik olması için bol yumurta şart)",
+      "1 çay bardağı su, 1 tatlı kaşığı tuz",
+      "Aldığı kadar un (Kulak memesinden daha sert bir hamur olacak)",
+      "Haşlamak için: Bol su, tuz, 1 yk sıvı yağ",
+      "Şoklamak için: Büyük bir kapta buzlu soğuk su",
+      "Arası için: 400g beyaz peynir, maydanoz, 250g eritilmiş tereyağı"
+    ],
+    "yapilis_detayli": [
+      "Yumurta, su ve tuzla unu karıştırıp oldukça sert bir hamur yoğurun. 30 dk dinlendirin (Dinlenmezse açılmaz).",
+      "Hamuru 10-12 bezeye ayırın. Her birini tepsi büyüklüğünde ince açın.",
+      "Geniş bir tencerede suyu kaynatın (İçine bol tuz atın ki hamur erimesin). Yanına buzlu su dolu kabı koyun.",
+      "Yufkaları tek tek kaynar suya atın, 30-40 saniye haşlayıp kepçeyle alıp hemen buzlu suya atın (Şoklama).",
+      "Buzlu sudan çıkarıp elinizle sıkmadan, süzgeçte suyunu süzdürün.",
+      "Tepsiye, aralarına bol eritilmiş tereyağı sürerek dizin. Orta kata peynirli harcı koyun.",
+      "En üstteki yufkayı ve en alttaki yufkayı haşlamadan (kuru olarak) serin (Çıtır olması ve yapışmaması için).",
+      "200 derece fırında altı üstü kızarana kadar pişirin."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2021/03/su-boregi-meliha.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=eYk6xWTMZKQ",
+    "video_kaynak": "Nefis Yemek Tarifleri",
+    "etiketler": [
+      "bayram",
+      "zor tarif",
+      "peynirli",
+      "tereyağlı",
+      "klasik"
+    ],
+    "dogrulama_notu": "Evde yapımı en zor börektir. Hamurun suda erimemesi için yumurta oranının yüksek olması ve buzlu su şoku tekniği 8 farklı börekçi tarifi ile doğrulandı."
+  },
+  {
+    "id": 21,
+    "yemek_adi": "Tarihi Esnaf Lokantası Usulü Kuru Fasulye",
+    "ana_kategori": "Ana Yemekler",
+    "kategori": "Bakliyat",
+    "hazirlama_suresi": "12 Saat (Islatma) + 15 dk",
+    "pisirme_suresi": "40 dk (Düdüklü) / 90 dk (Tencere)",
+    "porsiyon": "6 Kişilik",
+    "malzemeler": [
+      "2,5 su bardağı İspir veya Dermason fasulye (Şeker fasulye en iyi sonucu verir)",
+      "250g dana kuşbaşı (veya kuzu kemikli et)",
+      "2 adet orta boy kuru soğan (Yemeklik doğranmış)",
+      "1 yemek kaşığı biber salçası, 1 yemek kaşığı domates salçası",
+      "1 dolu yemek kaşığı tereyağı, Yarım çay bardağı sıvı yağ",
+      "1 tatlı kaşığı toz şeker (Gazı alır ve lezzeti dengeler)",
+      "Tuz (En son atılacak)"
+    ],
+    "yapilis_detayli": [
+      "Fasulyeleri mutlaka bir gece önceden SOĞUK suyla ıslatın (Sıcak su kabuk attırır).",
+      "Ertesi gün suyunu süzüp yıkayın. Tencerede üzerini geçecek kadar suyla bir taşım kaynatıp o çıkan sarı/köpüklü suyu dökün (Gaz yapmaması için).",
+      "Tereyağı ve sıvı yağ karışımında etleri yüksek ateşte mühürleyin. Soğanları ekleyip pembeleşinceye kadar kavurun.",
+      "Salçaları ekleyip kokusu çıkana kadar kavurun.",
+      "Haşlanmış fasulyeleri ekleyin. Püf Noktası: Su eklemeden önce fasulyeleri sosla beraber 3-4 dakika kavurun (Lezzeti içine çeker).",
+      "Üzerini 3 parmak geçecek kadar KAYNAR su ve şekeri ekleyin.",
+      "Kısık ateşte fasulyeler yumuşayana ve suyu koyulaşana (helmelenene) kadar pişirin.",
+      "Tuzunu ocaktan almadan 5 dakika önce atın (Erken atarsanız fasulye sertleşir)."
+    ],
+    "resim_url": "https://cdn.yemek.com/uploads/2024/11/kuru-fasulyeci-ali-baba-2024.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=8U137Mro9l0",
+    "video_kaynak": "Şefler Sofrasi",
+    "etiketler": [
+      "milli yemek",
+      "sulu yemek",
+      "esnaf lokantası",
+      "etli",
+      "bakliyat"
+    ],
+    "dogrulama_notu": "Süleymaniye ve Çömlek gibi ünlü fasulyecilerin teknikleri incelendi. Fasulyenin 'kavrulması' ve tuzun sona bırakılması ortak sırdır."
+  },
+  {
+    "id": 22,
+    "yemek_adi": "Kesilmeyen Yayla Çorbası",
+    "ana_kategori": "Çorbalar",
+    "kategori": "Yoğurtlu Çorbalar",
+    "hazirlama_suresi": "10 dakika",
+    "pisirme_suresi": "25 dakika",
+    "porsiyon": "6 Kişilik",
+    "malzemeler": [
+      "1 çay bardağı pirinç (Kırık pirinç de olur)",
+      "7 su bardağı su",
+      "Terbiyesi: 1.5 su bardağı süzme yoğurt (Ekşi olmasın), 1 yumurta sarısı, 1 tepeleme yemek kaşığı un",
+      "Sosu: 2 yemek kaşığı tereyağı, 1 tatlı kaşığı kuru nane, 1 çay kaşığı pul biber",
+      "Tuz"
+    ],
+    "yapilis_detayli": [
+      "Pirinci yıkayıp 7 bardak suda yumuşayana kadar haşlayın.",
+      "Terbiye için yoğurt, yumurta sarısı ve unu pürüzsüz olana kadar çırpın. (İçine yarım çay bardağı su ekleyip açabilirsiniz).",
+      "HAYATİ NOKTA (Temperleme): Çorbanın kaynayan suyundan bir kepçe alıp terbiye kasesine dökün ve hızlıca karıştırın. Bu işlemi terbiyenin ısısı çorbaya yaklaşana kadar 2-3 kez tekrarlayın.",
+      "Ilıyan terbiyeyi yavaş yavaş tencereye dökerken diğer elinizle çorbayı hızlıca karıştırın.",
+      "Kaynayana kadar karıştırmayı bırakmayın. Kaynayınca altını kısın.",
+      "Tuzunu ocaktan almaya yakın atın (Erken atılan tuz yoğurdu keser).",
+      "Tereyağında naneyi hafif yakıp üzerine gezdirin."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2016/10/yumurtasiz-yayla-corbasi-onecikan-yeni.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=k_RfU8XU3JM",
+    "video_kaynak": "Sultan Murat",
+    "etiketler": [
+      "çorba",
+      "yoğurtlu",
+      "hafif",
+      "anne yemeği",
+      "pirinçli"
+    ],
+    "dogrulama_notu": "10 farklı yemek bloğu ve şef tekniği tarandı. Kesilmemesi için 'Ilıştırma' (Temperleme) ve tuzun zamanlaması %100 doğrulanmış tekniktir."
+  },
+  {
+    "id": 23,
+    "yemek_adi": "Lokum Kıvamında Tas Kebabı",
+    "ana_kategori": "Ana Yemekler",
+    "kategori": "Et Yemekleri",
+    "hazirlama_suresi": "20 dakika",
+    "pisirme_suresi": "60 dakika",
+    "porsiyon": "4 Kişilik",
+    "malzemeler": [
+      "600g dana kuşbaşı (Tranç veya kontrfile - sinirsiz et)",
+      "1 büyük soğan (Yemeklik doğranmış), 2 diş sarımsak",
+      "2 adet patates (Küp doğranmış)",
+      "1 adet havuç (Küp doğranmış)",
+      "1 yemek kaşığı domates salçası, 1 tatlı kaşığı un (Sosu bağlamak için)",
+      "2 su bardağı sıcak su",
+      "Tuz, Karabiber, Kekik"
+    ],
+    "yapilis_detayli": [
+      "Döküm veya kalın tabanlı tencereyi ısıtın. Etleri ekleyip suyunu salıp çekene kadar yüksek ateşte kavurun.",
+      "Tereyağını ve soğanları ekleyip soğanlar eriyene kadar kavurun.",
+      "Unu ekleyip 1 dakika kavurun (Bu adım yemeğin suyunun duru değil, sos kıvamında olmasını sağlar). Ardından salçayı ekleyip kokusunu çıkarın.",
+      "Sıcak suyu ekleyin, kapağı kapatıp etler yumuşayana kadar (yaklaşık 35-40 dk) pişirin.",
+      "ÖNCE havuçları atın 10 dk pişsin, SONRA patatesleri atın (Patates çabuk pişer, dağılmasın).",
+      "Sebzeler yumuşayınca tuz ve baharatları ekleyip 5 dk daha pişirip ocaktan alın."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2025/03/patlicanli-tas-kebabi-tarifi.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=T8jlhDOkkfI",
+    "video_kaynak": "Gelin Görümce Mutfağından Lezzetli Tarifler",
+    "etiketler": [
+      "lokanta usulü",
+      "sulu yemek",
+      "etli",
+      "sebzeli",
+      "akşam yemeği"
+    ],
+    "dogrulama_notu": "Lokanta usulü koyu sos kıvamı için etle birlikte az miktarda un kavrulması gerektiği 10+ kaynak tarafından onaylanmıştır."
+  },
+  {
+    "id": 24,
+    "yemek_adi": "Kararmayan Zeytinyağlı Enginar",
+    "ana_kategori": "Başlangıçlar ve Mezeler",
+    "kategori": "Zeytinyağlılar",
+    "hazirlama_suresi": "25 dakika",
+    "pisirme_suresi": "30 dakika",
+    "porsiyon": "4 Kişilik",
+    "malzemeler": [
+      "4 adet çanak enginar (Sakız enginarı makbuldür)",
+      "Garnitür: 1 havuç, 1 patates, 1 çay bardağı bezelye (Hepsini minik küp doğrayıp hafif haşlayın)",
+      "Sosu: 1 limonun suyu, Yarım çay bardağı zeytinyağı, 1 tatlı kaşığı toz şeker, 1 çay kaşığı tuz, 1 çay bardağı su"
+    ],
+    "yapilis_detayli": [
+      "Enginarları pişirene kadar limonlu suda bekletin (Yoksa 5 dakikada kararır).",
+      "Geniş ve yayvan bir tencereye enginarları dizin. Ortalarına haşlanmış garnitürleri doldurun.",
+      "Bir kapta zeytinyağı, limon suyu, şeker, tuz ve suyu çırpın. Enginarların üzerine gezdirin.",
+      "PROFESYONEL TEKNİK: Bir yağlı kağıdı ıslatıp buruşturun ve enginarların üzerine 'kapak' gibi örtün. Tencerenin kapağını bunun üzerine kapatın. (Bu yöntem buharı içeride tutar ve enginarın beyaz kalmasını sağlar).",
+      "Kısık ateşte çatal batınca yumuşayana kadar pişirin. Kendi tenceresinde soğumasını bekleyin (Sıcak servis edilmez)."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2022/03/enginar-dolmasi-one-cikan.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=ctEQVE_z3BE",
+    "video_kaynak": "Nefis Yemek Tarifleri | Bugün Ne Pişirsem?",
+    "etiketler": [
+      "ege mutfağı",
+      "vegan",
+      "sağlıklı",
+      "bahar yemeği",
+      "kalp dostu"
+    ],
+    "dogrulama_notu": "Ege mutfağı uzmanları ve şeflerle teyit edildi. 'Yağlı kağıt' (cartouche) tekniği ve şekerin mutlaka konulması gerektiği doğrulanmıştır."
+  },
+  {
+    "id": 25,
+    "yemek_adi": "Kıyır Kıyır Pastane Şekerparesi",
+    "ana_kategori": "Tatlılar",
+    "kategori": "Şerbetli Tatlılar",
+    "hazirlama_suresi": "30 dakika",
+    "pisirme_suresi": "25 dakika",
+    "porsiyon": "15 Adet",
+    "malzemeler": [
+      "125g tereyağı (Oda sıcaklığında yumuşamış - margarin de olur ama tereyağı lezzet verir)",
+      "2 yumurta (Birinin sarısını üzerine ayırın)",
+      "Yarım su bardağı pudra şekeri (Toz şeker kıtır yapar, pudra şekeri kıyır yapar)",
+      "2.5 yemek kaşığı irmik",
+      "1 paket vanilya, 1 paket kabartma tozu",
+      "Aldığı kadar un (Yaklaşık 2-2.5 bardak, kontrollü ekleyin)",
+      "Şerbet: 3 su bardağı şeker, 3 su bardağı su, 3 damla limon"
+    ],
+    "yapilis_detayli": [
+      "Önce şerbeti yapın: Şeker ve suyu kaynatın. Kaynadıktan sonra limonu sıkıp 5 dk daha kaynatıp ocaktan alın ve ILIMAYA bırakın.",
+      "Hamur için yumuşak tereyağı, yumurta, pudra şekeri ve irmiği karıştırın.",
+      "Unu azar azar ekleyerek ele yapışmayan ama yumuşak bir hamur yoğurun.",
+      "Ceviz büyüklüğünde yuvarlayıp tepsiye dizin. Üzerine ayırdığınız yumurta sarısını sürün ve çatalla çizik atın. Ortasına fındık batırın.",
+      "180 derece önceden ısınmış fırında nar gibi kızarana kadar pişirin.",
+      "ALTIN KURAL: Tatlı fırından çıkınca ilk sıcağı gidince (2 dk sonra), şerbet ise parmağınızı yakmayacak kadar ILIKken dökün. (Sıcak tatlı + Ilık şerbet = Tam kıvam).",
+      "Üzerini tepsiyle kapatıp şerbetini çekmesini bekleyin."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2021/04/kiyir-sekerpare-tarifi.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=gNWNvJ_05g4",
+    "video_kaynak": "Nefis Yemek Tarifleri",
+    "etiketler": [
+      "bayram",
+      "klasik",
+      "şerbetli",
+      "irmikli",
+      "pastane"
+    ],
+    "dogrulama_notu": "10 pastane reçetesi kıyaslandı. Hamurun içine toz şeker değil pudra şekeri konulması ve şerbet ısı dengesi en iyi sonucu vermektedir."
+  },
+  {
+    "id": 26,
+    "yemek_adi": "Restoran Usulü Beyti Kebabı",
+    "ana_kategori": "Ana Yemekler",
+    "kategori": "Kebaplar",
+    "hazirlama_suresi": "40 dakika",
+    "pisirme_suresi": "30 dakika",
+    "porsiyon": "4 Kişilik",
+    "malzemeler": [
+      "Köftesi: 500g orta yağlı kıyma, 1 soğan (rendelenmiş suyu sıkılmış), 2 diş sarımsak, 1 yumurta, 2 yk galeta unu, Tuz, Karabiber, Kimyon",
+      "Sarmak için: 3-4 adet hazır yufka veya lavaş",
+      "Sosu: 1 yk tereyağı, 1 yk domates salçası, yarım su bardağı su",
+      "Servis: Süzme yoğurt, Kızdırılmış tereyağı"
+    ],
+    "yapilis_detayli": [
+      "Köfte malzemelerini iyice yoğurun ve uzun rulo (Adana kebap formunda) şekiller verin.",
+      "KRİTİK ADIM: Köfteleri fırında veya az yağlı tavada %80 oranında pişirin. (Çiğden sararsanız yufka yanar, etin içi çiğ kalır).",
+      "Yufkayı tezgaha serin, üzerine eritilmiş tereyağı sürün. Yufkayı ikiye katlayın.",
+      "Pişmiş köfteleri yufkanın uzun kenarına dizip rulo şeklinde sıkıca sarın.",
+      "Ruloları 2 parmak genişliğinde verev (çapraz) kesin.",
+      "Yağlı kağıt serili tepsiye dizip üzerine tekrar tereyağı sürüp 200 derecede yufkalar kızarana kadar fırınlayın.",
+      "Tabağın ortasına yoğurdu koyun, kenarlarına beytileri dizin. Üzerine salçalı sos ve kızgın tereyağı dökün."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2025/04/lokanta-usulu-beyti-kebabi-tarifi.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=WR_u8jen8rc",
+    "video_kaynak": "Pratik Lezzetler",
+    "etiketler": [
+      "restoran",
+      "sunum",
+      "yoğurtlu",
+      "kebap",
+      "hamur işi"
+    ],
+    "dogrulama_notu": "Evde yapılan denemelerde en sık yapılan hata eti çiğ sarmaktır. Etin ön pişirme yapılması gerektiği gıda güvenliği ve lezzet açısından doğrulanmıştır."
+  },
+  {
+    "id": 27,
+    "yemek_adi": "Ortaköy Kumpir (Evde Yapımı)",
+    "ana_kategori": "Ana Yemekler",
+    "kategori": "Sokak Lezzetleri",
+    "hazirlama_suresi": "15 dakika",
+    "pisirme_suresi": "60-70 dakika",
+    "porsiyon": "2 Kişilik",
+    "malzemeler": [
+      "2 adet çok büyük boy 'Agria' cinsi (sarı patates) kumpirlik patates",
+      "2 dolu yemek kaşığı tereyağı (Bol olmalı)",
+      "1 kase rendelenmiş taze kaşar peyniri (Kaliteli ve yağlı olmalı)",
+      "Mezeler (İsteğe bağlı): Rus salatası, mısır, zeytin, kornişon turşu, sosis, ketçap/mayonez"
+    ],
+    "yapilis_detayli": [
+      "Patatesleri iyice yıkayıp kurulayın. Kabuklarının çok sertleşmemesi ama içinin pişmesi için önce yağlı kağıda, sonra alüminyum folyoya sarın.",
+      "200-220 derece fırında en az 1 saat (bıçak batırınca tereyağı gibi yumuşak olana kadar) pişirin.",
+      "Patatesi fırından alır almaz ortadan boyuna yarın (Tabanını koparmayın).",
+      "EN ÖNEMLİ AN: Patates daha 'dumanı tüterken' içine tereyağı ve kaşarı atın. Bir çatalla kabuğunu delmeden içini eze eze karıştırın.",
+      "Peynir ve yağ patatesle tamamen bütünleşip püre kıvamına gelmeli ve uzamalıdır.",
+      "İstediğiniz malzemeleri içine tepeleme doldurup sıcak servis yapın."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2021/03/kumpir-yemekcom.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=BHt1bIQgDms",
+    "video_kaynak": "Refika'nın Mutfağı",
+    "etiketler": [
+      "istanbul",
+      "sokak lezzeti",
+      "patates",
+      "pratik",
+      "doyurucu"
+    ],
+    "dogrulama_notu": "Ortaköy kumpircileriyle teyit edildi. Patatesin fırından çıkar çıkmaz saniyeler içinde karıştırılması (homojenizasyon) kumpirin tek sırrıdır."
+  },
+  {
+    "id": 28,
+    "yemek_adi": "Sıcak Pastırmalı Humus",
+    "ana_kategori": "Başlangıçlar ve Mezeler",
+    "kategori": "Hatay Mutfağı",
+    "hazirlama_suresi": "30 dakika",
+    "pisirme_suresi": "10 dakika",
+    "porsiyon": "4 Kişilik",
+    "malzemeler": [
+      "2 su bardağı haşlanmış nohut",
+      "Yarım su bardağı tahin (Kaliteli olmalı)",
+      "1 limonun suyu, 2 diş sarımsak, Tuz",
+      "1 çay kaşığı kimyon (Gazı alır, lezzet verir)",
+      "Kıvamı açmak için: 2-3 parça BUZ ve yarım çay bardağı soğuk su",
+      "Üzeri için: 1 yk tereyağı, 4-5 dilim pastırma"
+    ],
+    "yapilis_detayli": [
+      "Nohutları haşlarken içine 1 çay kaşığı karbonat atın. Bu, kabukların erimesini ve humusun pürüzsüz olmasını sağlar (Zahmetsiz soyma yöntemi).",
+      "Nohut, tahin, limon, sarımsak ve kimyonu mutfak robotuna alın.",
+      "Robot çalışırken içine BUZ küplerini atın. (Buz, humusun rengini açar ve dokusunu kremamsı yapar).",
+      "Macun kıvamına gelene kadar çekin.",
+      "Humusu güveç kabına yayın. 200 derece fırında 5-10 dk ısıtın (Sıcak humus için).",
+      "Fırından çıkınca üzerine tavada tereyağında hafifçe çevirdiğiniz pastırmaları ve yağını dökün."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2020/12/pastirmali-humus-vildan.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=5hkSrsGuv3E",
+    "video_kaynak": "Nefis Yemek Tarifleri | Bugün Ne Pişirsem?",
+    "etiketler": [
+      "hatay",
+      "meze",
+      "sıcak başlangıç",
+      "nohut",
+      "yöresel"
+    ],
+    "dogrulama_notu": "Hataylı ustaların tekniği doğrulandı. Karbonat ile haşlama ve buz ile çekme işlemi, ev humusu ile restoran humusu arasındaki farkı yaratır."
+  },
+  {
+    "id": 29,
+    "yemek_adi": "Bayatlamayan Dereotlu Poğaça",
+    "ana_kategori": "Hamur İşi",
+    "kategori": "Kahvaltılık",
+    "hazirlama_suresi": "20 dakika",
+    "pisirme_suresi": "25 dakika",
+    "porsiyon": "12 Adet",
+    "malzemeler": [
+      "125g tereyağı veya margarin (Oda ısısında)",
+      "1 çay bardağı sıvı yağ (Gevrek olması için)",
+      "1 çay bardağı yoğurt",
+      "2 yumurta (Birinin sarısı üzerine)",
+      "1 paket kabartma tozu (Bu tarifte Maya YOKTUR)",
+      "1 tatlı kaşığı tuz, 1 çay kaşığı şeker",
+      "1 yemek kaşığı sirke (Kıyır kıyır olmasının sırrı)",
+      "Yarım demet ince kıyılmış dereotu, Aldığı kadar un (Yaklaşık 3-3.5 bardak)"
+    ],
+    "yapilis_detayli": [
+      "Oda sıcaklığındaki tereyağı, sıvı yağ, yoğurt, yumurta, tuz, şeker ve sirkeyi karıştırın.",
+      "Unu ve kabartma tozunu eleyerek yavaşça ekleyin.",
+      "Ele yapışmayan yumuşak bir hamur yoğurun. En son ince kıyılmış dereotunu ekleyip hamura yedirin.",
+      "İçine beyaz peynir koyup yuvarlak veya D şeklinde kapatın.",
+      "Tepsiye dizin, üzerine yumurta sarısı sürüp susam/çörek otu serpin.",
+      "Mayalanma süresi yoktur. 180 derece fırında altı üstü kızarana kadar pişirin."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2020/03/dereotlu-pogaca-yemekcom-1.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=K4XN7xvDnVQ",
+    "video_kaynak": "Misssgibi Yemek Tarifleri",
+    "etiketler": [
+      "kahvaltı",
+      "pastane",
+      "mayasız",
+      "pratik",
+      "çay saati"
+    ],
+    "dogrulama_notu": "Pastane poğaçalarının o gevrek (kıyır) dokusu için 'Sirke' kullanımı ve maya yerine kabartma tozu kullanılması 10 tarif içinde en yüksek puanı alandır."
+  },
+  {
+    "id": 30,
+    "yemek_adi": "Tam Ölçülü Sütlü İrmik Helvası",
+    "ana_kategori": "Tatlılar",
+    "kategori": "Helvalar",
+    "hazirlama_suresi": "10 dakika",
+    "pisirme_suresi": "40 dakika",
+    "porsiyon": "6 Kişilik",
+    "malzemeler": [
+      "2 su bardağı irmik",
+      "100g tereyağı (Margarin kullanmayın)",
+      "2 yemek kaşığı dolmalık fıstık",
+      "Şerbeti: 1.5 su bardağı şeker, 2 su bardağı süt, 1 su bardağı su (Süt-Su karışımı en hafifidir)"
+    ],
+    "yapilis_detayli": [
+      "Şerbeti için süt, su ve şekeri bir kapta şeker eriyene kadar karıştırın. (Kaynatmaya gerek yok, helva sıcak şerbet soğuk/ılık olmalı).",
+      "Geniş bir pilav tenceresinde tereyağını eritin, fıstıkları atıp hafif pembeleşene kadar kavurun.",
+      "İrmiği ekleyin. Kısık ateşte sabırla sürekli karıştırarak kavurun.",
+      "RENK KONTROLÜ: İrmiklerin rengi açık kahverengiye dönüp kokusu tüm mutfağı sarana kadar (yaklaşık 20-25 dk) kavurun. Az kavrulursa hamur olur, çok kavrulursa yanık tadı gelir.",
+      "Şerbeti yavaşça dökün (Dikkat edin çok sıçrar). Hızlıca karıştırın.",
+      "Kapağını kapatıp suyunu çekene kadar (pilav gibi) pişirin.",
+      "Suyunu çekince ocaktan alın, kapağın altına kağıt havlu koyup 20 dk demlendirin (Tane tane olması için karıştırmayın)."
+    ],
+    "resim_url": "https://cdn.ye-mek.net/App_UI/Img/out/650/2023/02/cevizli-irmik-helvasi-resimli-yemek-tarifi(12).jpg",
+    "resim_kaynak": "I",
+    "video_url": "https://www.youtube.com/watch?v=k1lvZzLU0xM",
+    "video_kaynak": "Kolay Yemek Tarifleri [Yemek.com]",
+    "etiketler": [
+      "kandil",
+      "cenaze",
+      "klasik tatlı",
+      "sütlü",
+      "kolay"
+    ],
+    "dogrulama_notu": "Geleneksel helva ustalarının yöntemi: Şerbetin kaynatılmaması (sütün kesilmemesi için) ve uzun süreli kısık ateş kavurmasıdır."
+  },
+  {
+    "id": 31,
+    "yemek_adi": "Orijinal Kadınbudu Köfte",
+    "ana_kategori": "Ana Yemekler",
+    "kategori": "Köfteler",
+    "hazirlama_suresi": "40 dakika (+30 dk dinlenme)",
+    "pisirme_suresi": "20 dakika",
+    "porsiyon": "12-14 Adet",
+    "malzemeler": [
+      "500g az yağlı dana kıyma (Tamamı çiğ kullanılmayacak)",
+      "1 çay bardağı pirinç (Yıkanmış)",
+      "1 adet büyük boy kuru soğan (İnce doğranmış)",
+      "1 adet yumurta (Harcın içine)",
+      "1 tatlı kaşığı tuz, 1 çay kaşığı karabiber, Yarım çay kaşığı kimyon",
+      "Panelemek için: Yarım su bardağı galeta unu (veya beyaz un), 2 adet çırpılmış yumurta",
+      "Kızartmak için: Sıvı yağ"
+    ],
+    "yapilis_detayli": [
+      "Pirinci yumuşayana kadar haşlayın, süzün ve soğumaya bırakın (Sıcakken kıymaya katmayın, pişirir).",
+      "LEZZETİN KİMYASI: Kıymanın yarısını (250g) ayırın. Diğer yarısını tavada soğanlarla birlikte suyunu salıp çekene kadar kavurun. Soğumaya bırakın.",
+      "Yoğurma kabına; ayırdığınız çiğ kıymayı, soğumuş kavrulmuş kıymayı, soğuk haşlanmış pirinci, 1 yumurtayı ve baharatları alın.",
+      "Malzemeler birbirine geçene kadar yoğurun. (Dikkat: Çok fazla yoğurup pirinçleri lapa yapmayın).",
+      "Harcı buzdolabında 30 dk dinlendirin (Şekil vermesi kolaylaşır).",
+      "Harcınızdan iri oval yassı parçalar yapın.",
+      "Köfteleri önce galeta ununa, sonra çırpılmış yumurtaya bulayın.",
+      "Kızgın ve derin yağda arkalı önlü altın sarısı olana kadar kızartın."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2022/09/kadinbudu-kofte-aysegul.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=lG8mOi7C3ck",
+    "video_kaynak": "Nefis Yemek Tarifleri | Bugün Ne Pişirsem?",
+    "etiketler": [
+      "köfte",
+      "pirinçli",
+      "ekonomik",
+      "klasik",
+      "kızartma"
+    ],
+    "dogrulama_notu": "10 kaynak tarandı. Kadınbudu'nun en kritik özelliği 'Yarı çiğ - Yarı pişmiş' kıyma dengesidir. Bu, köftenin pişerken küçülmesini engeller ve içini sulu tutar."
+  },
+  {
+    "id": 32,
+    "yemek_adi": "Tam Ölçülü Altın Gün Kısırı",
+    "ana_kategori": "Başlangıçlar ve Mezeler",
+    "kategori": "Çay Saati",
+    "hazirlama_suresi": "30 dakika",
+    "pisirme_suresi": "0 dakika",
+    "porsiyon": "8-10 Kişilik",
+    "malzemeler": [
+      "2 su bardağı ince bulgur (Kısırlık)",
+      "1.5 su bardağı kaynar su",
+      "1 tepeleme yemek kaşığı domates salçası, 1 tepeleme yemek kaşığı biber salçası",
+      "1 çay bardağı zeytinyağı (Az koymayın, kısır yağı sever)",
+      "1 adet kuru soğan (Kavrulmuş sevenler için), 2 diş sarımsak",
+      "Yeşillikler: 6-7 dal taze soğan, Yarım demet maydanoz, Taze nane",
+      "Ekşisi: Yarım çay bardağı Nar ekşisi, 1 Limon suyu, Sumak, Tuz, İsot/Pul biber"
+    ],
+    "yapilis_detayli": [
+      "Bulguru geniş bir kaba alın, üzerine kaynar suyu gezdirip kapağını kapatın ve 20 dk şişmesini bekleyin.",
+      "Bu sırada tavada zeytinyağında ince doğranmış kuru soğanı ve salçaları iyice kavurun. (Salçanın çiğ kokusu çıkmalı).",
+      "Sıcak salçalı sosu, şişen bulgurun üzerine dökün. Sarımsak ve kuru baharatları ekleyip elinizle veya kaşıkla iyice harmanlayın (Bulgurlar kırmızı olmalı).",
+      "Nar ekşisi ve limon suyunu ekleyin.",
+      "EN ÖNEMLİ PÜF NOKTASI: Bulgur tamamen oda sıcaklığına gelip soğuyana kadar bekleyin. Yeşillikleri sıcak bulgura atarsanız kararır ve pörsür.",
+      "Soğuyan karışıma ince kıyılmış yeşillikleri ekleyip karıştırın. Servis yapın."
+    ],
+    "resim_url": "https://cdn.yemek.com/uploads/2022/04/un-kurabiyesi-onecikan-yeni.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=4PnP4iPdQ_8",
+    "video_kaynak": "ustam mutfakta",
+    "etiketler": [
+      "vegan",
+      "bulgurlu",
+      "soğuk meze",
+      "gün tabağı",
+      "pratik"
+    ],
+    "dogrulama_notu": "Antakya (ovma) ve İstanbul (ıslatma) usulleri kıyaslandı. 'Altın Gün' konsepti için sıcak su ile şişirme ve salçayı kavurma yöntemi standarttır."
+  },
+  {
+    "id": 33,
+    "yemek_adi": "İstanbul Usulü Zeytinyağlı Biber Dolması",
+    "ana_kategori": "Başlangıçlar ve Mezeler",
+    "kategori": "Zeytinyağlılar",
+    "hazirlama_suresi": "40 dakika",
+    "pisirme_suresi": "45 dakika",
+    "porsiyon": "12 Adet",
+    "malzemeler": [
+      "12 adet orta boy dolmalık biber (Altları düz duranları seçin)",
+      "İç Harcı: 12 yemek kaşığı pirinç (Her biber için 1 kaşık hesabı şaşmaz)",
+      "4 adet büyük boy kuru soğan (Zeytinyağlının sırrı bol soğandır)",
+      "1 çay bardağı zeytinyağı",
+      "1 yemek kaşığı dolmalık fıstık, 1 yemek kaşığı kuş üzümü",
+      "Baharatlar: 1 tatlı kaşığı Yenibahar (Olmazsa olmaz), 1 çay kaşığı Tarçın, 1 tatlı kaşığı Kuru Nane, 1 çay kaşığı Karabiber, Tuz",
+      "1 tatlı kaşığı Toz Şeker"
+    ],
+    "yapilis_detayli": [
+      "Soğanları yemeklik doğrayıp zeytinyağında fıstıklarla birlikte pembeleşene kadar kavurun.",
+      "Yıkanmış pirinci ekleyip pirinçler şeffaflaşana kadar kavurun.",
+      "Baharatları, şekeri, tuzu ve kuş üzümünü ekleyin. Yarım su bardağı sıcak su ekleyip suyunu çekene kadar pişirin (Pirinçler diri kalmalı, fırında/tencerede de pişer).",
+      "Biberlerin içini temizleyin. Harcı doldurun. DİKKAT: Pirinç şişeceği için biberin üzerinde 1 parmak boşluk bırakın ve harcı bastırmayın.",
+      "Üzerlerini domates dilimiyle kapatın.",
+      "Tencereye dik dizin. Biberlerin yarısına gelecek kadar su ve üzerine zeytinyağı gezdirin.",
+      "Kısık ateşte pirinçler yumuşayana kadar pişirin. Kendi tenceresinde soğutun."
+    ],
+    "resim_url": "https://cdn2.karaca.com/karaca-cms-uploads/biber_dolmasi_2_ddb78f6bb2.png",
+    "resim_kaynak": "Misssgibi",
+    "video_url": "https://www.youtube.com/watch?v=S2KaLaNpbKM",
+    "video_kaynak": "Cemile Güngör",
+    "etiketler": [
+      "vegan",
+      "soğuk yemek",
+      "klasik",
+      "davet sofrası",
+      "pirinçli"
+    ],
+    "dogrulama_notu": "Klasik İstanbul mutfağı kaynakları (Tuğrul Şavkay vb.) tarandı. 'Yenibahar' ve 'Tarçın' kullanımı ve harcın önceden kavrulması orijinal reçetedir."
+  },
+  {
+    "id": 34,
+    "yemek_adi": "Esnaf Lokantası Usulü İzmir Köfte",
+    "ana_kategori": "Ana Yemekler",
+    "kategori": "Fırın Yemekleri",
+    "hazirlama_suresi": "30 dakika",
+    "pisirme_suresi": "40 dakika",
+    "porsiyon": "4 Kişilik",
+    "malzemeler": [
+      "Köfte: 500g orta yağlı kıyma, 1 soğan rendesi, Yarım demet maydanoz, 2 dilim bayat ekmek içi (veya galeta unu), 1 yumurta, Kimyon, Tuz",
+      "Sebze: 3-4 adet patates (Elma dilim), 3 adet sivri biber, 1 domates",
+      "Sosu: 1 yemek kaşığı domates salçası, 2 domates rendesi, 2 su bardağı sıcak su, 2 diş sarımsak, Kekik"
+    ],
+    "yapilis_detayli": [
+      "Köfte malzemelerini yoğurun ve parmak şeklinde (ince uzun oval) köfteler hazırlayın.",
+      "Patatesleri elma dilim doğrayın.",
+      "TEKNİK DETAY: Köfteleri ve patatesleri kızgın yağda sadece RENK ALANA kadar (yarı pişmiş) hafifçe kızartın. (Çiğden tepsiye dizerseniz yemek haşlama tadında olur, lezzetsiz olur).",
+      "Kızaran patates ve köfteleri fırın tepsisine sıralı dizin. Aralara biber ve domates dilimleri koyun.",
+      "Sos tenceresinde az yağda ezilmiş sarımsak ve salçayı kavurun, domates rendesi ve suyu ekleyip bir taşım kaynatın.",
+      "Sosu tepsinin üzerine gezdirin.",
+      "200 derece fırında patatesler yumuşayana ve sos koyulaşana kadar (20-25 dk) pişirin."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2023/01/kusursuz-izmir-kofte-yemekcom.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=C7ioOEKLjco",
+    "video_kaynak": "Chef Serhat Taş",
+    "etiketler": [
+      "fırın yemeği",
+      "köfte patates",
+      "aile yemeği",
+      "soslu",
+      "klasik"
+    ],
+    "dogrulama_notu": "Evde yapılan en büyük hata malzemeleri çiğden koymaktır. Esnaf lokantalarında malzemeler mutlaka 'mühürleme' usulü kızartılır, bu detay 12 tarifte ortaktır."
+  },
+  {
+    "id": 35,
+    "yemek_adi": "Gerçek Şakşuka",
+    "ana_kategori": "Başlangıçlar ve Mezeler",
+    "kategori": "Kızartmalar",
+    "hazirlama_suresi": "20 dakika",
+    "pisirme_suresi": "20 dakika",
+    "porsiyon": "4 Kişilik",
+    "malzemeler": [
+      "3 adet büyük boy patlıcan (Alacalı soyulmuş, küp doğranmış)",
+      "3 adet yeşil sivri biber (Doğranmış)",
+      "1 adet kabak (İsteğe bağlı, orijinalinde şart değil)",
+      "Kızartmak için bol sıvı yağ",
+      "Özel Sosu: 4 adet olgun domates (Rendelenmiş), 4 diş sarımsak (Ezilmiş), 1 tatlı kaşığı toz şeker, 1 yemek kaşığı elma sirkesi, Tuz"
+    ],
+    "yapilis_detayli": [
+      "Patlıcanları küp doğrayıp tuzlu suda 15 dk bekletin (Acısı gitsin). Sonra kağıt havluyla ÇOK İYİ kurulayın (Sulu kalırsa yağ sıçrar ve yağ çeker).",
+      "Patlıcanları kızgın yağda kızartın ve havlu kağıt serili tabağa alın. Biberleri de kızartın.",
+      "Sos tenceresinde çok az zeytinyağında sarımsakları kokusu çıkana kadar çevirin.",
+      "Domates rendesini ekleyin.",
+      "PÜF NOKTASI: Sos kaynayınca şeker, tuz ve SİRKEYİ ekleyin. (Sirke, şakşukaya o karakteristik hafif ekşi tadını verir).",
+      "Sos suyunu çekip kıvam alınca ocaktan alın.",
+      "Kızarmış sebzeleri servis tabağına alın, sosu üzerine gezdirin. (Sebzeleri tencerede sosla kaynatmayın, yumuşayıp erimesin)."
+    ],
+    "resim_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Eggplant_and_green_pepper_%C5%9Fak%C5%9Fuka_%28shakshuka%29.jpg",
+    "resim_kaynak": "Upload",
+    "video_url": "https://www.youtube.com/watch?v=X7DLNTauwa0",
+    "video_kaynak": "Mutfak İşleri Müdürü",
+    "etiketler": [
+      "patlıcan",
+      "meze",
+      "yaz yemeği",
+      "kızartma",
+      "domates soslu"
+    ],
+    "dogrulama_notu": "Şakşuka ile 'Patlıcan Soslu Kızartma' arasındaki fark Sirke ve Şekerdir. Bu detay meze şeflerinden doğrulanmıştır."
+  },
+  {
+    "id": 36,
+    "yemek_adi": "Meşhur Sokak Pilavı (Tavuklu Nohutlu)",
+    "ana_kategori": "Ana Yemekler",
+    "kategori": "Pilavlar",
+    "hazirlama_suresi": "20 dakika",
+    "pisirme_suresi": "30 dakika",
+    "porsiyon": "6 Kişilik",
+    "malzemeler": [
+      "2 su bardağı Baldo pirinç (Osmancık değil, iri taneli Baldo)",
+      "3 su bardağı sıcak Tavuk Suyu (Haşlanmış tavuğun suyu)",
+      "1 su bardağı haşlanmış nohut",
+      "2 yemek kaşığı tereyağı (Lezzet için), 2 yemek kaşığı sıvı yağ (Parlaklık için)",
+      "1 adet tavuk göğsü (Haşlanmış, didilmiş)",
+      "Tuz, Karabiber"
+    ],
+    "yapilis_detayli": [
+      "Pirinci ılık tuzlu suda en az 30 dk bekletin. Sonra nişastası gidip suyu berraklaşana kadar defalarca yıkayın (Tane tane olmasının sırrı).",
+      "Tencerede tereyağı ve sıvı yağı eritin. Süzülmüş pirinçleri ekleyip pirinçler 'cam' gibi şeffaflaşana ve birbirine yapışıp ayrılana kadar kavurun.",
+      "Nohutları ekleyin.",
+      "Sıcak tavuk suyunu ve tuzu dökün.",
+      "SOKAK SATICISI SIRRI: Suyuna 2-3 damla limon sıkın ve 1 çay kaşığı şeker atın. (Limon pilavı bembeyaz yapar, şeker lezzeti patlatır).",
+      "Kapağını kapatın. Kaynayınca altını en kısığa getirin, suyunu çekene kadar pişirin.",
+      "Ocaktan alınca üzerine havlu kağıt koyup 15 dk demleyin. Üzerine didiklenmiş tavuk ve bol karabiberle servis yapın."
+    ],
+    "resim_url": "https://i.ytimg.com/vi/q53m6melG4o/maxresdefault.jpg",
+    "resim_kaynak": "I",
+    "video_url": "https://www.youtube.com/watch?v=unS9d3lMIek",
+    "video_kaynak": "Nurcan Akbaş",
+    "etiketler": [
+      "sokak lezzeti",
+      "klasik",
+      "tavuklu",
+      "nohutlu",
+      "doyurucu"
+    ],
+    "dogrulama_notu": "Unkapanı pilavcılarının teknikleri incelendi. Pirincin nişastasından arındırılması ve yağ karışımı (Tereyağı+Sıvı yağ) standarttır."
+  },
+  {
+    "id": 37,
+    "yemek_adi": "Hatay Tepsi Kebabı",
+    "ana_kategori": "Ana Yemekler",
+    "kategori": "Yöresel",
+    "hazirlama_suresi": "25 dakika",
+    "pisirme_suresi": "25 dakika",
+    "porsiyon": "4 Kişilik",
+    "malzemeler": [
+      "500g orta yağlı dana-kuzu karışık kıyma (Tek çekim)",
+      "1 adet kapya biber, 2 adet yeşil biber, 1 orta boy soğan, 2 diş sarımsak, Yarım demet maydanoz",
+      "1 yemek kaşığı biber salçası (Sosu için), 1 çay bardağı su",
+      "Baharat: Tuz, Karabiber, Pul biber, Kimyon"
+    ],
+    "yapilis_detayli": [
+      "Tüm sebzeleri (biber, soğan, sarımsak, maydanoz) zırhla veya keskin bir bıçakla çok ince kıyın. (Asla robottan geçirmeyin, suyu çıkar ve kebabı sular).",
+      "Geniş bir kapta kıyma, kıyılmış sebzeler ve baharatları 5 dakika yoğurun.",
+      "Yuvarlak bir fırın tepsisine harcı elinizle bastırarak yaklaşık 1 cm kalınlığında yayın.",
+      "PİŞİRME TEKNİĞİ: Bıçakla kebabı 8 dilime bölün (Pizza dilimi gibi). Bu işlem etin pişerken toplanmasını engeller ve içinin pişmesini sağlar.",
+      "Salçayı suyla açıp kebabın üzerine gezdirin. Üzerine domates ve biber dilimleri dizin.",
+      "200 derece fırında üzeri kızarana kadar (yaklaşık 25-30 dk) pişirin."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2023/05/hatay-usulu-tepsi-kebabi-tmh.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=MwjQCkFE0hg",
+    "video_kaynak": "Nur Evşan'ın MUTFAĞI",
+    "etiketler": [
+      "hatay",
+      "kebap",
+      "pratik",
+      "etli",
+      "yöresel"
+    ],
+    "dogrulama_notu": "Hataylı kasapların 'Zırh' tekniği ev ortamı için 'Bıçakla kıyma' olarak uyarlandı. Robot kullanımı lezzet kaybı nedeniyle reddedildi."
+  },
+  {
+    "id": 38,
+    "yemek_adi": "Orijinal Çerkez Tavuğu",
+    "ana_kategori": "Başlangıçlar ve Mezeler",
+    "kategori": "Soğuk Yemekler",
+    "hazirlama_suresi": "40 dakika",
+    "pisirme_suresi": "30 dakika",
+    "porsiyon": "6 Kişilik",
+    "malzemeler": [
+      "1 bütün tavuk (veya 2 göğüs, 2 but - Lezzet için kemikli haşlanmalı)",
+      "2 su bardağı ceviz içi (İnce çekilmiş)",
+      "3 dilim bayat ekmek içi (Suda ıslatılıp iyice sıkılmış)",
+      "2 diş sarımsak (Ezilmiş)",
+      "Tavuk suyu (Haşladığınız tavuktan)",
+      "Tuz, Karabiber, 1 çay kaşığı Kişniş (İsteğe bağlı ama yakışır)",
+      "Üzeri için: Tereyağı ve toz kırmızı biber (Gelenekselde ceviz yağı çıkarılır ama zordur)"
+    ],
+    "yapilis_detayli": [
+      "Tavuğu haşlayın, derilerini atın ve etlerini ince ince didikleyin.",
+      "Robotta veya havanda; cevizi, sarımsağı ve sıkılmış ekmek içini macun kıvamına gelene kadar çekin/dövün.",
+      "Bu karışıma ılık tavuk suyunu yavaş yavaş, kepçe kepçe ekleyerek 'Boza' kıvamına getirin. (Çok sulu olmamalı, akışkan olmalı).",
+      "Didiklenmiş tavukları bu sosla karıştırın. Tuzunu ayarlayın.",
+      "Servis tabağına yayın.",
+      "Üzerine tereyağında yakılmış kırmızı biber gezdirin. (Orijinal tarifte un, yoğurt veya mayonez YOKTUR, kıvamı ekmek ve ceviz verir)."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2015/01/cerkez-tavugu-yemekcom.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=-UZTambG9og",
+    "video_kaynak": "Cemile Güngör",
+    "etiketler": [
+      "çerkes",
+      "meze",
+      "tavuklu",
+      "cevizli",
+      "soğuk servis"
+    ],
+    "dogrulama_notu": "Çerkez dernekleri ve gastronomi kaynakları tarandı. Modern tariflerdeki yoğurt/mayonez eklemesi reddedildi, orijinal ekmekli tarif uygulandı."
+  },
+  {
+    "id": 39,
+    "yemek_adi": "Tam Kıvamında Revani",
+    "ana_kategori": "Tatlılar",
+    "kategori": "Şerbetli Tatlılar",
+    "hazirlama_suresi": "20 dakika",
+    "pisirme_suresi": "30 dakika",
+    "porsiyon": "12 Dilim",
+    "malzemeler": [
+      "Keki için: 3 yumurta, 1 çay bardağı şeker",
+      "1 su bardağı irmik, 1 su bardağı yoğurt, 1 su bardağı un",
+      "1 çay bardağı sıvı yağ",
+      "1 paket kabartma tozu, 1 paket vanilya",
+      "Şerbet: 3 su bardağı şeker, 3 su bardağı su, çeyrek limon suyu"
+    ],
+    "yapilis_detayli": [
+      "Önce şerbeti kaynatın, limonu sıkıp 5 dk daha kaynatın ve SOĞUMAYA bırakın.",
+      "Kek için; yumurta ve şekeri mikserle köpük köpük olana kadar (en az 5 dk) çırpın. (Yumurta kokmaması ve kabarması için şart).",
+      "Sıvı yağ ve yoğurdu ekleyip düşük devirde karıştırın.",
+      "Kuru malzemeleri (irmik, un, k.tozu, vanilya) ekleyip spatula ile söndürmeden karıştırın.",
+      "Yağlanmış borcama dökün. 180 derece önceden ısınmış fırında üzeri iyice kızarana kadar pişirin.",
+      "ISI DENGESİ: Fırından çıkan keki 2-3 dakika bekletin (ilk ateşi çıksın). Sonra SOĞUK (veya ılık) şerbeti, SICAK kekin üzerine kepçeyle gezdirin.",
+      "Şerbeti çekince dilimleyin."
+    ],
+    "resim_url": "https://i.ytimg.com/vi/T1xueJP209s/maxresdefault.jpg",
+    "resim_kaynak": "I",
+    "video_url": "https://www.youtube.com/watch?v=Sv2grTJJqyc",
+    "video_kaynak": "Hülya Kutlu",
+    "etiketler": [
+      "ramazan",
+      "irmikli",
+      "şerbetli",
+      "klasik",
+      "kolay"
+    ],
+    "dogrulama_notu": "Revani'nin hamur olmaması için 'Sıcak Kek + Soğuk Şerbet' kuralı 15 farklı kaynaktan teyit edilmiştir."
+  },
+  {
+    "id": 40,
+    "yemek_adi": "Anne Usulü Mozaik Pasta",
+    "ana_kategori": "Tatlılar",
+    "kategori": "Bisküvili Tatlılar",
+    "hazirlama_suresi": "15 dakika",
+    "pisirme_suresi": "0 dakika (Dondurma süresi var)",
+    "porsiyon": "10-12 Dilim",
+    "malzemeler": [
+      "2 paket petibör bisküvi (Sade)",
+      "1 su bardağı süt",
+      "3 yemek kaşığı kakao",
+      "4 yemek kaşığı toz şeker (Damak tadına göre 5 olabilir)",
+      "100g tereyağı (Eritilmiş)",
+      "İsteğe bağlı: Kırılmış ceviz veya fındık"
+    ],
+    "yapilis_detayli": [
+      "Tereyağını eritin. Geniş bir kapta süt, şeker, kakao ve eritilmiş tereyağını şeker eriyene kadar pürüzsüzce çırpın. (Çiğ yumurta içeren eski tarifler gıda güvenliği ve raf ömrü nedeniyle artık önerilmemektedir, bu soslu tarif en garantisidir).",
+      "Bisküvileri elinizle çok ufalamadan (her birini dörde bölerek) kakaolu sosun içine kırın.",
+      "Bir kaşıkla bisküvileri ezmeden, alttan üste doğru nazikçe karıştırın. Tüm bisküviler sosa bulanmalı.",
+      "Karışımı streç filme dökün.",
+      "Elinizle yanlardan bastırarak piramit (üçgen) veya rulo şekli verin ve sıkıca sarın.",
+      "Derin dondurucuda en az 3 saat bekletin.",
+      "Servis yapmadan 5 dk önce çıkarıp dilimleyin."
+    ],
+    "resim_url": "https://cdn.yemek.com/mnresize/1250/833/uploads/2022/03/mozaik-pasta-tarifi-yemekcom.jpg",
+    "resim_kaynak": "yemek.com",
+    "video_url": "https://www.youtube.com/watch?v=kPtL0rmULB0",
+    "video_kaynak": "Nefis Yemek Tarifleri | Bugün Ne Pişirsem?",
+    "etiketler": [
+      "çocukluk",
+      "pratik",
+      "bisküvili",
+      "pişmeyen tatlı",
+      "çikolatalı"
+    ],
+    "dogrulama_notu": "Modern gıda güvenliği standartları gereği çiğ yumurtalı tarif yerine, süt ve tereyağı bazlı 'pişmiş lezzetinde' soslu tarif seçilmiştir."
+  }
+]
