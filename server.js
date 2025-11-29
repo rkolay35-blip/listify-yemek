@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Listify API v5.6</title>
+            <title>Listify API v5.7</title>
             <style>
                 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f4f4f9; color: #333; }
                 h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
@@ -39,7 +39,7 @@ app.get('/', (req, res) => {
             </style>
         </head>
         <body>
-            <h1>🚀 Listify API v5.6 Dokümantasyonu</h1>
+            <h1>🚀 Listify API v5.7 Dokümantasyonu</h1>
             
             <div class="endpoint">
                 <h2>1. Haftalık Menü</h2>
@@ -62,6 +62,7 @@ app.get('/', (req, res) => {
                 <h2>4. Trivia / İlginç Bilgiler</h2>
                 <span class="method">GET</span> <span class="url">/api/trivia</span>
                 <p>Zorunlu Parametre: <code>?dil=tr</code> veya <code>?dil=en</code></p>
+                <p>Veri Kaynağı: Spoonacular (Çok dilli yapı)</p>
                 <p><a href="/api/trivia?dil=tr" target="_blank">Örnek Türkçe İstek</a></p>
             </div>
             
@@ -173,63 +174,54 @@ app.get('/api/meta', (req, res) => {
     });
 });
 
-// --- 5. ENDPOINT: Trivia (DÜZELTİLMİŞ & İÇ İÇE YAPI DESTEKLİ) ---
+// --- 5. ENDPOINT: Trivia (YENİ YAPILANDIRMA) ---
+// Yapı: { "veriler": [ { "bilgi_en": "...", "bilgi_tr": "..." } ] }
 app.get('/api/trivia', (req, res) => {
     const dil = req.query.dil;
 
-    if (!dil) {
-        return res.status(400).json({ hata: "Dil parametresi zorunludur. (?dil=tr)" });
-    }
-
-    // --- AKILLI VERİ BULUCU (GÜNCELLENDİ) ---
-    // JSON yapısı: { "veriler": { "bilgiler": [...] } } ihtimaline karşı tarama yapar.
-    let tumBilgiler = null;
-
-    if (Array.isArray(triviaData)) {
-        // 1. Kök dizin direkt dizi ise
-        tumBilgiler = triviaData;
-    } else if (triviaData.veriler) {
-        // 2. "veriler" anahtarı varsa
-        if (Array.isArray(triviaData.veriler)) {
-            // "veriler" direkt bir dizi ise
-            tumBilgiler = triviaData.veriler;
-        } else if (triviaData.veriler.bilgiler && Array.isArray(triviaData.veriler.bilgiler)) {
-            // "veriler" içinde "bilgiler" dizisi varsa (Senin belirttiğin durum)
-            tumBilgiler = triviaData.veriler.bilgiler;
-        }
-    } else if (triviaData.bilgiler && Array.isArray(triviaData.bilgiler)) {
-        // 3. "bilgiler" anahtarı kök dizindeyse
-        tumBilgiler = triviaData.bilgiler;
-    }
-
-    // Hala bulamadıysak genel arama yap (Son çare)
-    if (!tumBilgiler && typeof triviaData === 'object' && triviaData !== null) {
-        const values = Object.values(triviaData);
-        const bulunanDizi = values.find(val => Array.isArray(val));
-        if (bulunanDizi) {
-            tumBilgiler = bulunanDizi;
-        }
-    }
-
-    // Eğer hala liste bulunamadıysa hata ver
-    if (!tumBilgiler || !Array.isArray(tumBilgiler)) {
-        return res.status(500).json({ 
-            hata: "Trivia veri yapısı 'veriler' veya 'bilgiler' içinde bulunamadı.",
-            sunucudaki_veri_keys: (typeof triviaData === 'object') ? Object.keys(triviaData) : "Veri yok"
+    // 1. Dil parametresi kontrolü (Sadece 'tr' veya 'en' kabul et)
+    if (!dil || (dil !== 'tr' && dil !== 'en')) {
+        return res.status(400).json({ 
+            hata: "Geçersiz veya eksik dil parametresi.",
+            kullanim: "/api/trivia?dil=tr veya /api/trivia?dil=en"
         });
     }
 
-    // Dile göre filtreleme
-    const filtrelenmis = tumBilgiler.filter(item => 
-        item.dil && item.dil.toLowerCase() === dil.toLowerCase()
-    );
+    // 2. Veri kaynağını bul (Senin JSON yapına göre 'veriler' içinde)
+    let tumBilgiler = null;
 
-    if (filtrelenmis.length === 0) {
-        return res.status(404).json({ mesaj: `Bu dilde (${dil}) bilgi bulunamadı.` });
+    if (triviaData.veriler && Array.isArray(triviaData.veriler)) {
+        tumBilgiler = triviaData.veriler;
+    } else if (Array.isArray(triviaData)) {
+        tumBilgiler = triviaData;
     }
 
-    const randomBilgi = filtrelenmis[Math.floor(Math.random() * filtrelenmis.length)];
-    res.json(randomBilgi);
+    if (!tumBilgiler || tumBilgiler.length === 0) {
+        return res.status(500).json({ 
+            hata: "Trivia veri yapısı sunucuda bulunamadı veya 'veriler' listesi boş.",
+            sunucudaki_keys: Object.keys(triviaData)
+        });
+    }
+
+    // 3. Rastgele Seçim
+    // Önce listeden rastgele bir obje seçiyoruz (İçinde hem TR hem EN var)
+    const randomItem = tumBilgiler[Math.floor(Math.random() * tumBilgiler.length)];
+
+    // 4. İstenen dile göre veriyi hazırla
+    // Kullanıcıya sadece istediği dildeki metni dönüyoruz
+    const secilenMetin = dil === 'tr' ? randomItem.bilgi_tr : randomItem.bilgi_en;
+
+    // Eğer o dilde veri yoksa (örn: bilgi_tr alanı boşsa) fallback yapabiliriz veya uyarı verebiliriz
+    if (!secilenMetin) {
+        return res.status(404).json({ mesaj: "Seçilen madde için bu dilde çeviri bulunamadı." });
+    }
+
+    res.json({
+        id: randomItem.id,
+        kategori: randomItem.kategori || "genel",
+        bilgi: secilenMetin, // Sadece istenen dildeki metin
+        dil: dil // Hangi dilde döndüğümüzü belirtelim
+    });
 });
 
 app.listen(PORT, () => {
