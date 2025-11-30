@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Listify API v6.0</title>
+            <title>Listify API v6.1</title>
             <style>
                 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f4f4f9; color: #333; }
                 h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
@@ -36,34 +36,45 @@ app.get('/', (req, res) => {
                 .url { font-family: monospace; font-size: 1.1em; color: #d35400; }
                 code { background: #eee; padding: 2px 5px; border-radius: 3px; font-family: monospace; color: #c0392b; }
                 a { color: #2980b9; text-decoration: none; }
+                .badge { background: #e74c3c; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.8em; margin-left: 5px; }
             </style>
         </head>
         <body>
-            <h1>🚀 Listify API v6.0 Dokümantasyonu</h1>
+            <h1>🚀 Listify API v6.1 Dokümantasyonu</h1>
             
             <div class="endpoint">
                 <h2>1. Haftalık Menü</h2>
                 <span class="method">GET</span> <span class="url">/api/haftalik-menu</span>
-                <p><strong>Akıllı Takvim Modu:</strong> Girilen günü, mevcut ayın günü olarak kabul eder ve gerçek haftanın gününü hesaplar.</p>
-                <p>Parametre: <code>?gun=29</code> (Ayın 29. günü için menü getirir)</p>
+                <p>Parametre: <code>?gun=29</code></p>
             </div>
 
             <div class="endpoint">
-                <h2>2. Yemekler</h2>
+                <h2>2. Yemekler (Genel Arama)</h2>
                 <span class="method">GET</span> <span class="url">/api/yemekler</span>
-                <p>Parametreler: <code>?ulke=turk</code>, <code>?hazirlama_suresi=30</code></p>
+                <p>Parametreler: <code>?hazirlama_suresi=30</code></p>
             </div>
 
             <div class="endpoint">
-                <h2>3. Meta Veriler</h2>
+                <h2>3. Mutfaklara Göre Yemekler <span class="badge">YENİ</span></h2>
+                <span class="method">GET</span> <span class="url">/api/mutfak/:ulke</span>
+                <p>Ülke mutfaklarına özel doğrudan erişim linkleri.</p>
+                <ul>
+                    <li><a href="/api/mutfak/turk" target="_blank">/api/mutfak/turk</a> (Türk Yemekleri)</li>
+                    <li><a href="/api/mutfak/italyan" target="_blank">/api/mutfak/italyan</a> (İtalyan Yemekleri)</li>
+                    <li><a href="/api/mutfak/meksika" target="_blank">/api/mutfak/meksika</a> (Meksika Yemekleri)</li>
+                    <li><a href="/api/mutfak/fransiz" target="_blank">/api/mutfak/fransiz</a> (Fransız Yemekleri)</li>
+                </ul>
+            </div>
+
+            <div class="endpoint">
+                <h2>4. Meta Veriler</h2>
                 <span class="method">GET</span> <span class="url">/api/meta</span>
             </div>
 
             <div class="endpoint">
-                <h2>4. Günün Bilgisi (Trivia)</h2>
+                <h2>5. Günün Bilgisi (Trivia)</h2>
                 <span class="method">GET</span> <span class="url">/api/trivia</span>
-                <p><strong>Günlük Rotasyon:</strong> Her gün otomatik olarak yeni bir bilgi seçilir. İstenirse manuel gün seçimi de yapılabilir.</p>
-                <p>Parametreler: <code>?dil=tr</code> (Zorunlu), <code>?gun=5</code> (Opsiyonel)</p>
+                <p>Parametreler: <code>?dil=tr</code>, <code>?gun=5</code></p>
             </div>
             
             <p style="text-align: center; color: #7f8c8d; margin-top: 40px;">Listify Backend © 2024</p>
@@ -146,7 +157,29 @@ app.get('/api/yemekler', (req, res) => {
     res.json(liste);
 });
 
-// --- 3. ENDPOINT: Tek Yemek ---
+// --- 3. ENDPOINT: Mutfaklara Göre Yemekler (YENİ) ---
+// Kullanım: /api/mutfak/turk, /api/mutfak/italyan
+app.get('/api/mutfak/:ulke', (req, res) => {
+    const ulkeParam = req.params.ulke; // URL'den gelen parametre
+    let liste = yemeklerData.yemekler ? yemeklerData.yemekler : yemeklerData;
+
+    // Ülke filtresi (Büyük/Küçük harf duyarsız)
+    const filtrelenmis = liste.filter(y => 
+        y.ulke && y.ulke.toLowerCase().includes(ulkeParam.toLowerCase())
+    );
+
+    if (filtrelenmis.length === 0) {
+        // Liste boş dönmek yerine 404 dönüyoruz ki front-end bilsin
+        return res.status(404).json({ 
+            mesaj: `Bu mutfağa (${ulkeParam}) ait yemek bulunamadı.`,
+            ipucu: "Mevcut ülkeleri görmek için /api/meta endpointini kullanabilirsiniz."
+        });
+    }
+
+    res.json(filtrelenmis);
+});
+
+// --- 4. ENDPOINT: Tek Yemek ---
 app.get('/api/yemekler/:id', (req, res) => {
     const liste = yemeklerData.yemekler ? yemeklerData.yemekler : yemeklerData;
     const yemek = liste.find(y => y.id == req.params.id);
@@ -154,7 +187,7 @@ app.get('/api/yemekler/:id', (req, res) => {
     else res.status(404).json({ mesaj: "Yemek bulunamadı" });
 });
 
-// --- 4. ENDPOINT: Meta Veriler ---
+// --- 5. ENDPOINT: Meta Veriler ---
 app.get('/api/meta', (req, res) => {
     const liste = yemeklerData.yemekler ? yemeklerData.yemekler : yemeklerData;
     const anaKategorilerSet = new Set();
@@ -183,10 +216,10 @@ app.get('/api/meta', (req, res) => {
     });
 });
 
-// --- 5. ENDPOINT: Trivia (GÜNLÜK ROTASYONLU + MANUEL SEÇİM) ---
+// --- 6. ENDPOINT: Trivia ---
 app.get('/api/trivia', (req, res) => {
     const dil = req.query.dil;
-    const gunParam = req.query.gun; // Opsiyonel parametre
+    const gunParam = req.query.gun; 
 
     if (!dil || (dil !== 'tr' && dil !== 'en')) {
         return res.status(400).json({ hata: "Geçersiz veya eksik dil parametresi. (?dil=tr)" });
@@ -207,25 +240,17 @@ app.get('/api/trivia', (req, res) => {
     let tarihKodu;
 
     if (gunParam) {
-        // --- MANUEL SEÇİM ---
         const istenenGun = parseInt(gunParam);
         if (isNaN(istenenGun)) {
             return res.status(400).json({ hata: "Geçersiz gün parametresi. Lütfen sayı giriniz." });
         }
-        
-        // Kullanıcının girdiği güne göre döngüsel index (1 girerse 0. index)
         secilenIndex = (istenenGun - 1) % tumBilgiler.length;
-        
-        // Negatif kontrolü (eğer yanlışlıkla negatif girilirse)
         if (secilenIndex < 0) secilenIndex += tumBilgiler.length;
-        
-        tarihKodu = istenenGun; // Manuel kod
+        tarihKodu = istenenGun;
     } else {
-        // --- GÜNLÜK OTOMATİK ROTASYON ---
         const now = new Date();
-        const trTime = now.getTime() + (3 * 60 * 60 * 1000); // TR saati ile zaman damgası
+        const trTime = now.getTime() + (3 * 60 * 60 * 1000); 
         const birGunMs = 24 * 60 * 60 * 1000;
-        
         const gunSayisi = Math.floor(trTime / birGunMs);
         secilenIndex = gunSayisi % tumBilgiler.length;
         tarihKodu = gunSayisi;
@@ -239,8 +264,8 @@ app.get('/api/trivia', (req, res) => {
     }
 
     res.json({
-        tarih_kodu: tarihKodu, // Debug için: Hangi gün sayısındayız
-        gunun_indexi: secilenIndex, // Debug için: Listeden kaçıncı eleman seçildi
+        tarih_kodu: tarihKodu,
+        gunun_indexi: secilenIndex, 
         id: gununBilgisi.id,
         kategori: gununBilgisi.kategori || "genel",
         bilgi: secilenMetin,
