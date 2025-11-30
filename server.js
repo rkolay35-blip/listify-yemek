@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Listify API v6.3 Dokümantasyonu</title>
+            <title>Listify API v6.4 Dokümantasyonu</title>
             <style>
                 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 960px; margin: 0 auto; padding: 20px; background-color: #f8f9fa; color: #343a40; }
                 header { text-align: center; border-bottom: 2px solid #007bff; padding-bottom: 20px; margin-bottom: 30px; }
@@ -56,7 +56,7 @@ app.get('/', (req, res) => {
             <header>
                 <h1>🚀 Listify API Dokümantasyonu</h1>
                 <p>Yemek Tarifleri, Haftalık Menüler ve Kültürel İçerikler Servisi</p>
-                <small>Versiyon: 6.3 | Durum: Aktif</small>
+                <small>Versiyon: 6.4 | Durum: Aktif</small>
             </header>
 
             <!-- 1. Haftalık Menü -->
@@ -171,9 +171,32 @@ app.get('/', (req, res) => {
                     <span class="method">GET</span> 
                     <span class="url">/api/meta</span>
                 </div>
-                <p class="desc">Uygulama arayüzündeki (Frontend) filtreleme menülerini, dropdown'ları doldurmak için kullanılır. Veritabanındaki benzersiz kategori ve etiketleri listeler.</p>
+                <p class="desc">Frontend arayüzündeki filtreleri doldurmak için benzersiz kategori, etiket ve ülke listelerini döner. Artık ülkeye göre daraltılabilir.</p>
+                
+                <h3>Parametreler</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Parametre</th>
+                            <th>Örnek Değer</th>
+                            <th>Açıklama</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>ulke</code></td>
+                            <td>turk</td>
+                            <td><span class="badge-opt">OPSİYONEL</span>. Eğer belirtilirse; kategori, etiket ve süre listeleri sadece bu ülkenin yemeklerine göre filtrelenir.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
                 <div class="example-box">
-                    <a href="/api/meta" target="_blank">Meta Verilerini Görüntüle</a> (JSON Yanıtı)
+                    <strong>Örnekler:</strong>
+                    <ul>
+                        <li><a href="/api/meta" target="_blank">/api/meta</a> (Tüm veritabanı özeti)</li>
+                        <li><a href="/api/meta?ulke=turk" target="_blank">/api/meta?ulke=turk</a> (Sadece Türk mutfağına ait filtreler)</li>
+                    </ul>
                 </div>
             </div>
 
@@ -314,30 +337,55 @@ app.get('/api/yemekler/:id', (req, res) => {
     else res.status(404).json({ mesaj: "Yemek bulunamadı" });
 });
 
-// --- 4. ENDPOINT: Meta Veriler ---
+// --- 4. ENDPOINT: Meta Veriler (GÜNCELLENDİ) ---
 app.get('/api/meta', (req, res) => {
-    const liste = yemeklerData.yemekler ? yemeklerData.yemekler : yemeklerData;
+    // Ham liste
+    const tamListe = yemeklerData.yemekler ? yemeklerData.yemekler : yemeklerData;
+    const ulkeParam = req.query.ulke;
+
+    // 1. ADIM: Global Ülke Listesini Hazırla (Filtreden bağımsız)
+    // Ne seçilirse seçilsin, sistemde hangi ülkeler olduğunu en başta göstermek istiyoruz.
+    const tumUlkelerSet = new Set();
+    tamListe.forEach(y => {
+        if (y.ulke) tumUlkelerSet.add(y.ulke);
+    });
+
+    // 2. ADIM: Filtreleme
+    // Eğer ?ulke=turk denildiyse, diğer meta verileri (kategori, etiket) SADECE o ülkenin yemeklerinden çıkar.
+    // Eğer ?ulke= yoksa, tüm yemeklerden çıkar.
+    let islenenListe = tamListe;
+    if (ulkeParam) {
+        islenenListe = tamListe.filter(y => y.ulke && y.ulke.toLowerCase().includes(ulkeParam.toLowerCase()));
+    }
+
+    // 3. ADIM: Meta Verileri Topla (İşlenen Liste Üzerinden)
     const anaKategorilerSet = new Set();
     const altKategorilerSet = new Set();
     const etiketlerSet = new Set();
     const surelerSet = new Set();
-    const ulkelerSet = new Set();
+    
+    // Not: Filtrelenmiş ülkeyi ayrıca listeye eklemeye gerek yok, global listede var zaten.
+    // Ancak "şu an gösterilenler hangi ülkelerden oluşuyor" bilgisi istenirse buradan toplanabilir.
 
-    liste.forEach(yemek => {
+    islenenListe.forEach(yemek => {
         if (yemek.ana_kategori) anaKategorilerSet.add(yemek.ana_kategori);
         if (yemek.kategori) altKategorilerSet.add(yemek.kategori);
         if (yemek.hazirlama_suresi) surelerSet.add(yemek.hazirlama_suresi);
-        if (yemek.ulke) ulkelerSet.add(yemek.ulke);
+        
         if (yemek.etiketler && Array.isArray(yemek.etiketler)) {
             yemek.etiketler.forEach(etiket => etiketlerSet.add(etiket));
         }
     });
 
+    // 4. ADIM: Sonuç
     res.json({
-        toplam_yemek_sayisi: liste.length,
+        tum_ulkeler: Array.from(tumUlkelerSet).sort(), // En başta tüm ülkeler
+        secilen_ulke_filtresi: ulkeParam || null,      // Hangi filtre uygulandı?
+        filtrelenmis_sonuc_sayisi: islenenListe.length,
+        
+        // Aşağıdakiler filtrelenmiş sonuçlardır
         ana_kategoriler: Array.from(anaKategorilerSet).sort(),
         alt_kategoriler: Array.from(altKategorilerSet).sort(),
-        ulkeler: Array.from(ulkelerSet).sort(),
         etiketler: Array.from(etiketlerSet).sort(),
         sureler: Array.from(surelerSet).sort()
     });
